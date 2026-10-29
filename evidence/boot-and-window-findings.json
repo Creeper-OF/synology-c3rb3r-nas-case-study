@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "case_id": "NAS-A-20261029",
+  "reviewed_at": "2026-10-29T23:57:37.796201+08:00",
+  "main_window": {
+    "start_inclusive": "2026-10-29T05:00:00+08:00",
+    "end_exclusive": "2026-10-29T10:00:00+08:00",
+    "context_extended_to": "2026-10-29T10:30:00+08:00"
+  },
+  "assessment": "No evidence of ransomware damage in the checked boot structures/components;application and logging failures are documented. Static consistency does not guarantee the next boot or authenticate all firmware.",
+  "boot": {
+    "loader_partition_bytes": 133169152,
+    "loader_partition_sha256": "547e855dbf3a387adace84426b2a90bdb712b35602c8e7506b1d0992d7c5747b",
+    "fat_copies_identical": true,
+    "primary_backup_boot_sector_identical": true,
+    "entries": 894,
+    "regular_files": 884,
+    "fat_chain_errors": 0,
+    "cross_linked_clusters": 0,
+    "unreferenced_allocated_clusters": 0,
+    "encrypted_suffix_entries": 0,
+    "ransom_note_entries": 0,
+    "partition_table_checks": [
+      {
+        "role": "system disk",
+        "scheme": "MBR",
+        "all_declared_checks_passed": true,
+        "partitions": 4
+      },
+      {
+        "role": "data disk 1",
+        "scheme": "GPT",
+        "all_declared_checks_passed": true,
+        "partitions": 3
+      },
+      {
+        "role": "data disk 2",
+        "scheme": "GPT",
+        "all_declared_checks_passed": true,
+        "partitions": 3
+      }
+    ],
+    "kernel_boot_header_version": "4.4.180",
+    "actual_kernel_payload_version": "4.4.302+",
+    "initramfs_entries": 981,
+    "initramfs_trailer_valid": true,
+    "initramfs_known_malicious_marker_hits": 0,
+    "matching_kernel_version_modules": 184,
+    "current_selected_disk_file_comparisons": 10,
+    "all_selected_current_disk_file_hashes_match_image": true,
+    "current_pid1_matches_disk_systemd": true,
+    "rc_subr_matches_same_device_defaults": true,
+    "nas_boot_id_unchanged_since_first_resident_capture": true,
+    "deleted_busybox_matches_initramfs": true,
+    "firmware_authenticity_proven": false,
+    "reboot_test_performed": false
+  },
+  "disk_window": {
+    "root_paths_enumerated": 45370,
+    "root_inode_slots_with_base_times_in_window": 5278,
+    "base_timestamp_field_matches": 11646,
+    "log_inodes_scanned": 769,
+    "main_window_readable_log_records_or_fragments": 18386,
+    "cross_source_logs_globally_deduplicated": false,
+    "recovered_appended_plaintext_log_tails": 9,
+    "recovered_appended_plaintext_bytes": 2394263,
+    "independent_ext4_extraction_checks": 13,
+    "selected_timeline_records_verified": 9,
+    "raw_header_fragment_different_from_named_logs": 24,
+    "raw_differing_fragment_free_block_occurrences": 13,
+    "raw_differing_fragments_sharing_first100_chars_with_known_records": 17,
+    "disk_sqlite_distinct_records": 94,
+    "disk_sqlite_records_not_in_current_intact_database": 0
+  },
+  "timeline": [
+    {
+      "time": "2026-10-29T05:02:00+08:00",
+      "observation": "DSM login-flow authentication failure remains readable in an encrypted log.",
+      "limit": "Not a successful login or complete exploit request."
+    },
+    {
+      "time": "2026-10-29T05:03:19+08:00",
+      "observation": "root rm invocation names five synotgzz.PID cron paths.",
+      "limit": "Per-file deletion return codes absent."
+    },
+    {
+      "time": "2026-10-29T05:09:45.916+08:00",
+      "observation": "Previously preserved encryption-start marker mtime.",
+      "limit": "Not direct process creation observation."
+    },
+    {
+      "time": "2026-10-29T05:10:20+08:00",
+      "observation": "root rm invocation targets /bin/l0ck.enc.",
+      "limit": "Not the deletion time of libgld."
+    },
+    {
+      "time": "2026-10-29T05:21:08+08:00",
+      "observation": "Jellyfin crash/core-dump record.",
+      "limit": "This line alone does not prove the cause."
+    },
+    {
+      "time": "2026-10-29T06:25:25+08:00",
+      "observation": "Container logging reports file is not a database.",
+      "limit": "Does not independently identify the damaged database or attacker action."
+    },
+    {
+      "time": "2026-10-29T06:55:48+08:00",
+      "observation": "lighttpd segfault names mod_cgi.so.L0CK3D;other web-service crashes follow.",
+      "limit": "Evidence of an affected library and application failure;not boot corruption."
+    },
+    {
+      "time": "2026-10-29T06:56:56+08:00",
+      "observation": "Log Center startup reports missing syslog_main.sh.",
+      "limit": "Missing path reason not proven by that line alone."
+    },
+    {
+      "time": "2026-10-29T06:56:58+08:00",
+      "observation": "Log Center syslog-ng start failure;retries persist into07:49.",
+      "limit": "Restart-loop records are not independent intrusion attempts."
+    },
+    {
+      "time": "2026-10-29T07:49:56+08:00",
+      "observation": "Generated syslog configuration has current inode mtime/ctime;generator comment retained.",
+      "limit": "Not direct evidence of an attacker rewriting the configuration."
+    },
+    {
+      "time": "2026-10-29T09:30:32+08:00",
+      "observation": "QQ process segfault names liblinux_compat.so.L0CK3D.",
+      "limit": "Application-library evidence,not encryptor-process identity."
+    },
+    {
+      "time": "2026-10-29T09:53:23+08:00",
+      "observation": "Container Python process core-dump record.",
+      "limit": "Not identified as the encryptor."
+    },
+    {
+      "time": "2026-10-29T10:24:30.003+08:00",
+      "observation": "Previously preserved completion-marker mtime,shown as context outside main window.",
+      "limit": "Not direct process exit observation."
+    }
+  ],
+  "preservation": {
+    "previous_original_root_image_sha256_unchanged": true,
+    "root_working_copy_sha256_unchanged": true,
+    "loader_working_copy_sha256_unchanged": true,
+    "block_devices_read_only_open": true,
+    "nas_reboot_performed": false,
+    "nas_configuration_or_recovery_service_changes": false,
+    "remote_acquisition_creates_normal_ssh_sudo_audit_records": true,
+    "raw_images_logs_credentials_or_business_data_published": false
+  },
+  "limits": [
+    "Online captures are non-atomic;root image predates current loader/startup capture.",
+    "Base inode times only;implausible generic-tool birthtime interpretations were excluded.",
+    "No complete original exploit request,original executable inode,or effective decryption key recovered.",
+    "No distinct encryptor-OOM conclusion follows from application core dumps or missing records."
+  ]
+}

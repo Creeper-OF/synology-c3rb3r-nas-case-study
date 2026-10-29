@@ -593,6 +593,129 @@
         "Overlaps other format methods; no additive source/candidate coverage claim."
       ],
       "raw_records_published": false
+    },
+    {
+      "id": "E31",
+      "title": "Read-only boot-region acquisition and loader structural checks",
+      "private_records": [
+        {
+          "name": "boot-window-20261029/publication-private/E31-LOADER_VERIFIED_RECEIPT_PRIVATE.json",
+          "sha256_at_review": "e6325f2932f53ee56c801ebddd54188159bacae9a134f32cd86ca0158f063f05"
+        },
+        {
+          "name": "boot-window-20261029/publication-private/E31-PARTITION_TABLE_CHECKS_PRIVATE.json",
+          "sha256_at_review": "046bd4bd982e715fc759cb25a7495dcd4c7834fa1c959768fed852fe55b86bec"
+        },
+        {
+          "name": "boot-window-20261029/publication-private/E31-FAT_LOADER_ANALYSIS_PRIVATE.json",
+          "sha256_at_review": "3c1fb26fe8a88f25dc3b91f02a8eb4a7f71bb0dc937d65bfd40221084f630aec"
+        },
+        {
+          "name": "boot-window-20261029/publication-private/E31-MBR_GRUB_CHAIN_CHECK.json",
+          "sha256_at_review": "ef3e567f9d685cec144476407da24436e25e065a9e5ed098583b96b9470fcd50"
+        },
+        {
+          "name": "boot-window-20261029/publication-private/E31-KERNEL_PAYLOAD_ANALYSIS.json",
+          "sha256_at_review": "68347b9927ad5343e177148646e74d1701698208e0a14e52cfe4df87a903f24a"
+        },
+        {
+          "name": "boot-window-20261029/publication-private/E31-INITRAMFS_ANALYSIS_PRIVATE.json",
+          "sha256_at_review": "0449b4467b45ae615e2529ae72d2deebb2a19b6efb67f10e0da3d73f02fa4c14"
+        },
+        {
+          "name": "boot-window-20261029/publication-private/E31-FINAL_INTEGRITY_RECEIPT.json",
+          "sha256_at_review": "2a7319609b42d7c5976cb3b8956dd9414872b18b8156cb9f7f6863f0571d0dde"
+        }
+      ],
+      "public_summary": [
+        "Current loader partition133169152bytes captured read-only; local/source hashes match.",
+        "System-disk MBR and both data-disk primary/backup GPT checks passed.",
+        "FAT mirrors and backup boot sector agree;894 entries and981 initramfs entries parsed;actual kernel payload and184 modules identify4.4.302+.",
+        "No known-good preincident baseline or reboot test; no claim of comprehensive firmware attestation."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E32",
+      "title": "Current startup-file comparison and deleted BusyBox attribution",
+      "private_records": [
+        {
+          "name": "boot-window-20261029/publication-private/E32-CURRENT_STARTUP_ASSESSMENT_PRIVATE.json",
+          "sha256_at_review": "fdb7be53800335d73ddc2cd7119f5aa43bccd1b7ce17b1323f51ba240bc30c29"
+        },
+        {
+          "name": "boot-window-20261029/publication-private/E32-INITRAMFS_BUSYBOX_ATTRIBUTION_PRIVATE.json",
+          "sha256_at_review": "5df8b1241e752021b76810ad42c91f491b6c70352534163bee3d88b0d58335a2"
+        }
+      ],
+      "public_summary": [
+        "Ten selected current disk-file hashes match retained root-image copies;PID1 executable matches disk systemd.",
+        "Saved deleted BusyBox executable matches initramfs BusyBox byte-for-byte;initial-root Telnet configuration is present.",
+        "These checks support early-boot provenance;do not establish that the custom loader is vendor-authentic."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E33",
+      "title": "05:00-10:00 disk log reconstruction and plaintext append recovery",
+      "private_records": [
+        {
+          "name": "boot-window-20261029/publication-private/E33-LOG_SUMMARY.json",
+          "sha256_at_review": "cf5de0d6c02c4deb5ce5771a6be0d429ff35e91a0f95ec54082b21a4f3c7be06"
+        },
+        {
+          "name": "boot-window-20261029/publication-private/E33-APPENDED_PLAINTEXT_LOG_TAILS_PRIVATE.json",
+          "sha256_at_review": "0de39fbeb5c13e0ebbe808ef9965954a8efa1cf08baf28e18770133042627719"
+        },
+        {
+          "name": "boot-window-20261029/publication-private/E33-VERIFIED_TIMELINE_PRIVATE.json",
+          "sha256_at_review": "702bc47b4f16cf69fef5239156375d85daacff1fe7ddb90b91d2bd20dd2043f5"
+        },
+        {
+          "name": "boot-window-20261029/publication-private/E33-INDEPENDENT_EXT4_EXTRACTION_CHECKS.json",
+          "sha256_at_review": "0ed68fe294d8a7359a2c1d055dbd0ec042b869f40eb001d101607d968e9f4cee"
+        }
+      ],
+      "public_summary": [
+        "18386 main-window readable records/fragments extracted from769 log inodes;cross-source duplicates remain.",
+        "Nine encrypted logs retain2394263 appended plaintext bytes after structurally validated historical footers.",
+        "Thirteen independent debugfs extractions match;selected timeline records verified directly or through validated XZ.",
+        "Crash/failure chronology establishes observations,not that every failure was caused by the same actor."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E34",
+      "title": "Root inode-window, free-block and disk SQLite review",
+      "private_records": [
+        {
+          "name": "boot-window-20261029/publication-private/E34-INVENTORY_SUMMARY.json",
+          "sha256_at_review": "73f80f557b13abe7081f6ee806eedc458beeea1188936394220a5e4ed88c4fbb"
+        },
+        {
+          "name": "boot-window-20261029/publication-private/E34-RAW_DISK_WINDOW_SUMMARY.json",
+          "sha256_at_review": "a5c4fad9ce27bc23c1939113a87facaa6280435e4dee9e1374312d535ba80c47"
+        },
+        {
+          "name": "boot-window-20261029/publication-private/E34-RAW_NEW_FRAGMENT_REVIEW_PRIVATE.json",
+          "sha256_at_review": "4c35b07b06ab6a60aa7836dff55fac48c069f4d28e8ace839b93d4aa2bfa6456"
+        },
+        {
+          "name": "boot-window-20261029/publication-private/E34-DISK_DATABASE_NOVELTY.json",
+          "sha256_at_review": "1f1c2c2c73430356cfe2e4b95682a9f0345848cadb75481998ee662e4ba11fd0"
+        },
+        {
+          "name": "boot-window-20261029/publication-private/E34-SAVED_CIPHERTEXT_MTIME_DISTRIBUTION_PRIVATE.json",
+          "sha256_at_review": "e4d9982cbb7e29bf242d34d107a52355583847a0c8462dcd220dda2b41ddba6d"
+        }
+      ],
+      "public_summary": [
+        "5278 root-image inode slots have base timestamps in the main window;not counts of independent attack operations.",
+        "Raw carving comparison yields24 differing coherent text fragments,13 free-block occurrences;17 share first100chars with known records.",
+        "No additional clear payload,successful-login or encryptor-OOM record in those fragments.",
+        "All94 disk-carved audit records already occur in intact and previously saved databases;not94new logins."
+      ],
+      "raw_records_published": false
     }
   ],
   "memory_slices": [
@@ -625,7 +748,7 @@
     }
   ],
   "injection_fragment_file_offset": 4993348294,
-  "follow_up_reviewed_at": "2026-10-29T23:08:40.668533+08:00",
+  "follow_up_reviewed_at": "2026-10-29T23:57:37.796201+08:00",
   "derived_page_proof": {
     "description": "Strictly decoded cron/name/command co-location page; raw bytes remain private",
     "bytes": 4096,

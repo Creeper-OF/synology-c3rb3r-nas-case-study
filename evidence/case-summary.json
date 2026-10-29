@@ -2,7 +2,7 @@
   "schema_version": 1,
   "case_id": "NAS-A-20261029",
   "timezone": "Asia/Shanghai",
-  "fact_review_cutoff": "2026-10-29T23:08:40.668533+08:00",
+  "fact_review_cutoff": "2026-10-29T23:57:37.796201+08:00",
   "recovery_count_cutoff": "2026-10-29T22:46:35.390802+08:00",
   "status": {
     "effective_decryption_key_found": false,
@@ -273,5 +273,16 @@
     "same_delivery_endpoint_confirmed": true,
     "same_exact_delivery_batch_proven": false,
     "orphan_xattr_bound_to_libgld": false
+  },
+  "boot_and_disk_window_follow_up": {
+    "report": "boot-and-window-findings.json",
+    "boot_damage_observed_in_checked_components": false,
+    "firmware_authenticity_proven": false,
+    "loader_partition_copy_bytes": 133169152,
+    "loader_partition_sha256": "547e855dbf3a387adace84426b2a90bdb712b35602c8e7506b1d0992d7c5747b",
+    "current_startup_hashes_match_saved_root_image": true,
+    "plaintext_appended_log_tails": 9,
+    "plaintext_appended_log_bytes": 2394263,
+    "effective_decryption_key_found": false
   }
 }
