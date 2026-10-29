@@ -716,6 +716,129 @@
         "All94 disk-carved audit records already occur in intact and previously saved databases;not94new logins."
       ],
       "raw_records_published": false
+    },
+    {
+      "id": "E35",
+      "title": "NAS-local second memory acquisition and full declared System RAM coverage",
+      "private_records": [
+        {
+          "name": "report-and-attack-reconstruction-20261030/publication-private/E35-LAUNCH_RECEIPT_PRIVATE.json",
+          "sha256_at_review": "4cf2a83ac018e481d52b58370909258b82d033020fdb6418a59d072911b42adc"
+        },
+        {
+          "name": "report-and-attack-reconstruction-20261030/publication-private/E35-COMPLETION_PRIVATE.json",
+          "sha256_at_review": "559e26e589a9d1d55fa224c34e799dd2ead509b97db29f68dd442e66a551ca15"
+        },
+        {
+          "name": "report-and-attack-reconstruction-20261030/publication-private/E35-PHYSICAL_COVERAGE_PREFLIGHT.json",
+          "sha256_at_review": "fe4b57aa033bb6d9e0628562fb75dda461dcf2b0e6ccba64f0c86bce57dda027"
+        },
+        {
+          "name": "report-and-attack-reconstruction-20261030/publication-private/E35-SUPPLEMENTAL_PHYSICAL_CAPTURE_PRIVATE.json",
+          "sha256_at_review": "8c53b47825e917ec03ec543f5a65bc2a6cfd87e97c85efad126403bffff78972"
+        },
+        {
+          "name": "report-and-attack-reconstruction-20261030/publication-private/E35-collector.py",
+          "sha256_at_review": "8548e347a41a124d78cde674710afc58c2153861d307fc99ff5fe1c1686f8551"
+        }
+      ],
+      "public_summary": [
+        "Second capture Oct30 00:15:12-00:28:56UTC+8,stored and verified on NAS;not the first Oct29 acquisition.",
+        "Nine kcore mappings plus2048Bdevmem supplement cover8468817920unique declaredSystemRAM bytes;five swap devices7075725312bytes.",
+        "Raw memory,environments and business contents remain private;no learning-material recovery detail in this update."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E36",
+      "title": "Memory evidence readback,read-only sealing and capture bounds",
+      "private_records": [
+        {
+          "name": "report-and-attack-reconstruction-20261030/publication-private/E36-FINAL_RECEIPT_PRIVATE.json",
+          "sha256_at_review": "a3ad46405d5d4cefd47812ae050eff3ec249197e494c60d186163c2b94cf7c43"
+        },
+        {
+          "name": "report-and-attack-reconstruction-20261030/publication-private/E36-POST_SEAL_VERIFICATION_PRIVATE.json",
+          "sha256_at_review": "c1a9ebf57a34143245a7a5e2f21ffed6abb808b3e26811c1714a5bb580a43bda"
+        },
+        {
+          "name": "report-and-attack-reconstruction-20261030/publication-private/E36-PROCESS_CORRECTIONS_PRIVATE.json",
+          "sha256_at_review": "5eee7502d6bbd51ebd19cf6bcb41255d6992859b7ac56dca6d890af02a2826c5"
+        }
+      ],
+      "public_summary": [
+        "70main data files plus one supplementary file verified;80files/7directories including control records set0400/0500.",
+        "Logical15785226381bytes;allocated9745203200bytes;sparse zero extents preserve logical content.",
+        "Process pre496/post498PIDs,628post threads;pagemap495PIDs,48339VMAs,135declared skips;1038ENOENT warnings,zero main-source failures.",
+        "Sealing hashes detect changes;mode bits are not hardware immutability or an atomic memory snapshot."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E37",
+      "title": "Source-node and attack-chain reconstruction using corrected associations",
+      "private_records": [
+        {
+          "name": "report-and-attack-reconstruction-20261030/publication-private/E37-RECONSTRUCTION_ASSESSMENT_PRIVATE.json",
+          "sha256_at_review": "91bf26f1153bdb8168c5c3c43cb65f6d5b67bc265d73ec60900fa6c5b57dfaa5"
+        },
+        {
+          "name": "report-and-attack-reconstruction-20261030/publication-private/E37-TIME_ALIGNMENT_PRIVATE.json",
+          "sha256_at_review": "22baa49757ec1fc9119a382e39f97f04f8a924da65e087deaecb8be90a000460"
+        },
+        {
+          "name": "report-and-attack-reconstruction-20261030/publication-private/E37-INITIAL_MEMORY_ACQUISITION_MANIFEST_PRIVATE.json",
+          "sha256_at_review": "d805c169496074f188b72b0d5e49b9096a8882e2ec06005c4fdbf9c1f3cc0f71"
+        },
+        {
+          "name": "report-and-attack-reconstruction-20261030/publication-private/E37-cloud-frps-attack-window.json",
+          "sha256_at_review": "b8cf38ce5f933f5996250007a9bde18ada1c9a834843774ea079eb193f4499ac"
+        },
+        {
+          "name": "report-and-attack-reconstruction-20261030/publication-private/E37-cron-logical-slot-crosscheck.json",
+          "sha256_at_review": "5f825fe74a69e32c3f7747474ba6fc3b1af879869ecbbe4468d7f06bce9dbc7b"
+        },
+        {
+          "name": "report-and-attack-reconstruction-20261030/publication-private/E37-cron-page-table-4.4.302-reconstruction.json",
+          "sha256_at_review": "bd68d0b06bb0785fd0f3039cd8e493fbcda786765dbba1493224dae54ffea4fc"
+        },
+        {
+          "name": "report-and-attack-reconstruction-20261030/publication-private/E37-PRIMARY_REFERENCES_REVIEW.json",
+          "sha256_at_review": "31492442cd86c4d6763705ae2c006250c8d94ea0259f9070f06ffbf4c92d8f54"
+        }
+      ],
+      "public_summary": [
+        "46[.]8[.]78[.]122 appears as two management-proxy peers and as script/payload target;source ports48388/48398.",
+        "CVE-2024-10441-compatible Web-login/plugin/cron chain strongly supported;original request and full process execution lineage remain incomplete.",
+        "Corrected zram-slot/page-table/task association identifies saved crondPID13917;no claim from superseded mapping.",
+        "Cross-host clocks not independently calibrated;cron mention year inferred;precise binary batch/operator identity unproven."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E38",
+      "title": "23:36 completed GPR,TAR and linked page-table continuation",
+      "private_records": [
+        {
+          "name": "report-and-attack-reconstruction-20261030/publication-private/E38-ROUND_RESULTS.json",
+          "sha256_at_review": "42338fe6cfd69fde7551277b7b2385e3028b23be840137f9d0d151834297fca3"
+        },
+        {
+          "name": "report-and-attack-reconstruction-20261030/publication-private/E38-ROUND_HANDOFF.txt",
+          "sha256_at_review": "9129ee96fcf72d770fa9e1060c6b6f39cdf89e9544a6dc35579638408a446ce7"
+        },
+        {
+          "name": "report-and-attack-reconstruction-20261030/publication-private/E38-GPR_TAR_REVIEW_PRIVATE.json",
+          "sha256_at_review": "62f0374bed0999648b75ad57ac98bfac084661f5f644124d89e3ccc0f63dbd07"
+        }
+      ],
+      "public_summary": [
+        "Declared ChaCha8 TARcounter4/5scan completed564jobs/67489880036position-layout attempts;zero valid headers.",
+        "964GPRsets;2332148priority-derived AESvalues checked against24120footers;zero hits.",
+        "125PGD roots yield14audited new bridges and1293contexts;349849additional-set AESvalues also negative.",
+        "Candidate sets overlap and are not globally additive;full-rangeChaCha12/20and several other layouts remain untested."
+      ],
+      "raw_records_published": false
     }
   ],
   "memory_slices": [
@@ -748,7 +871,7 @@
     }
   ],
   "injection_fragment_file_offset": 4993348294,
-  "follow_up_reviewed_at": "2026-10-29T23:57:37.796201+08:00",
+  "follow_up_reviewed_at": "2026-10-30T00:49:17.454937+08:00",
   "derived_page_proof": {
     "description": "Strictly decoded cron/name/command co-location page; raw bytes remain private",
     "bytes": 4096,

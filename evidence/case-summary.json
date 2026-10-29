@@ -2,7 +2,7 @@
   "schema_version": 1,
   "case_id": "NAS-A-20261029",
   "timezone": "Asia/Shanghai",
-  "fact_review_cutoff": "2026-10-29T23:57:37.796201+08:00",
+  "fact_review_cutoff": "2026-10-30T00:49:17.454937+08:00",
   "recovery_count_cutoff": "2026-10-29T22:46:35.390802+08:00",
   "status": {
     "effective_decryption_key_found": false,
@@ -93,7 +93,7 @@
     "first_intrusion_time_known": false,
     "complete_original_request_obtained": false,
     "legitimate_frp_relay_is_attacker_evidence": false,
-    "associated_external_node": "S1 (previous alias); independently public delivery IOC is defanged in evidence/ext4-findings.json",
+    "associated_external_node": "46[.]8[.]78[.]122 (previous aliasS1)",
     "association_basis": [
       "Existing relay connection logs matched to local client instance",
       "Strictly decoded command suffix targets the same node",
@@ -141,7 +141,29 @@
       "valid_key_hits": 0,
       "counts_not_globally_additive": true
     },
-    "late_round_results": "late-key-validation.json"
+    "late_round_results": "late-key-validation.json",
+    "additional_completed_2336": {
+      "completed_at": "2026-10-29T23:36:44.918204+08:00",
+      "effective_decryption_key_found": false,
+      "tar_chacha_rounds": 8,
+      "tar_counters": [
+        4,
+        5
+      ],
+      "tar_jobs": 564,
+      "tar_position_layout_attempts": 67489880036,
+      "tar_header_candidates": 0,
+      "gpr_distinct_sets": 964,
+      "priority_aes_values": 2332148,
+      "priority_footer_tests": 56251409760,
+      "linked_pgd_roots": 125,
+      "new_audited_short_bridges": 14,
+      "distinct_pointer_contexts": 1293,
+      "linked_context_aes_values": 349849,
+      "linked_context_footer_tests": 8438357880,
+      "globally_deduplicated_total_claimed": false,
+      "full_range_chacha12_or20_done": false
+    }
   },
   "recovery_checkpoints": [
     {
@@ -284,5 +306,14 @@
     "plaintext_appended_log_tails": 9,
     "plaintext_appended_log_bytes": 2394263,
     "effective_decryption_key_found": false
-  }
+  },
+  "memory_preservation_follow_up": {
+    "record": "memory-preservation-20261030.json",
+    "completed_and_readback_verified": true,
+    "new_capture_key_tests_performed": false,
+    "unique_declared_system_ram_bytes": 8468817920,
+    "swap_bytes": 7075725312,
+    "total_evidence_logical_bytes": 15785226381
+  },
+  "attack_reconstruction": "attack-reconstruction-20261030.json"
 }

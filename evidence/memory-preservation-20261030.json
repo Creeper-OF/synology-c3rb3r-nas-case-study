@@ -1,0 +1,117 @@
+{
+  "started_at_utc8": "2026-10-30T00:15:12.382290+08:00",
+  "finished_at_utc8": "2026-10-30T00:28:56.502407+08:00",
+  "status": "completed_and_readback_verified",
+  "main_manifest_sha256": "c05a02c42aab6966859453d1f96a4515bb26b197ab5aa737c23478110e61132b",
+  "sha256sums_sha256": "2db8a5a248598cc6d2fbb2dd6c6295789a407351fe6cc7d3089963aa3d013ac7",
+  "supplement_manifest_sha256": "d20a51d37b6562fe24aebbad93be52736fa491fb6190641e3d040f8802ec539b",
+  "supplement_sha256sums_sha256": "980ffa54385960625a1fda9180abe1247772c8efe3370759b73e3bdf64f7514e",
+  "readme_sha256": "bb5ce669759bd9e629e93ca25755ad4b53a8506489c3f172e9d2834869b5f6f3",
+  "runtime_file_sha256": {
+    "collector.py": "8548e347a41a124d78cde674710afc58c2153861d307fc99ff5fe1c1686f8551",
+    "collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "PROGRESS.json": "c727511db9764dbf4f0a66663b5c4d9620c93601d4d2f10679082b5666579f48"
+  },
+  "main_evidence_files": 70,
+  "supplement_files": 1,
+  "ram_files": 9,
+  "swap_files": 5,
+  "ram_logical_bytes_including_alias_and_supplement": 8479909888,
+  "unique_system_ram_bytes_preserved": 8468817920,
+  "uncovered_system_ram_bytes": 0,
+  "swap_bytes": 7075725312,
+  "total_evidence_logical_bytes": 15785226381,
+  "total_evidence_allocated_bytes": 9745203200,
+  "process_metadata": {
+    "processes-pre.tar": {
+      "pids": 496,
+      "threads_listed": 0
+    },
+    "processes-post.tar": {
+      "pids": 498,
+      "threads_listed": 628
+    },
+    "pagemaps.tar": {
+      "saved_bytes": 41413712,
+      "pids": 495,
+      "vma_ranges": 48339,
+      "skipped_ranges": 135,
+      "incomplete_or_error_ranges": 0
+    }
+  },
+  "metadata_warning_count": 1038,
+  "source_failures": [],
+  "all_main_and_supplement_data_hashes_match": true,
+  "files_mode": "0400",
+  "directories_mode": "0500",
+  "atomic_snapshot": false,
+  "existing_recovery_service_changed": false,
+  "raw_memory_exported_off_nas_by_this_run": false,
+  "seal_file_sha256": "791b2c5095f34df6417a517b36e58c5daab7ae39060db5638b53c0fcf1e4df24",
+  "schema_version": 1,
+  "case_id": "NAS-A-20261029",
+  "reviewed_at": "2026-10-30T00:49:17.454937+08:00",
+  "sealed_at_utc8": "2026-10-30T00:29:42.589446+08:00",
+  "metadata_warning_errno_counts": {
+    "ENOENT": 1038
+  },
+  "read_only_files": 80,
+  "read_only_directories": 7,
+  "post_seal_modes_verified": true,
+  "no_partial_files_remaining": true,
+  "declared_system_ram_ranges": [
+    [
+      4096,
+      645120
+    ],
+    [
+      1048576,
+      520093696
+    ],
+    [
+      521142272,
+      536870912
+    ],
+    [
+      537919488,
+      3101077504
+    ],
+    [
+      3116044288,
+      3116048384
+    ],
+    [
+      3116318720,
+      3117826048
+    ],
+    [
+      3120537600,
+      3120562176
+    ],
+    [
+      4294967296,
+      9663676416
+    ]
+  ],
+  "kcore_system_ram_gap_before_supplement": [
+    [
+      643072,
+      645120
+    ]
+  ],
+  "supplement": {
+    "source": "/dev/mem",
+    "physical_start": 643072,
+    "bytes": 2048,
+    "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad",
+    "readback_matches": true
+  },
+  "first_capture": {
+    "at_utc": "2026-10-29T06:26:29Z",
+    "mapped_bytes": 8479907840,
+    "is_distinct_acquisition": true
+  },
+  "new_capture_decryption_key_tests_performed": false,
+  "raw_evidence_published": false,
+  "source_directory_withheld": true
+}

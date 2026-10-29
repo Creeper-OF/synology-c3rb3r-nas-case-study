@@ -84,5 +84,11 @@
     "structured_header_candidates": 0,
     "full_file_verified_keys": 0,
     "not_globally_deduplicated": true
+  },
+  "later_scope_update": {
+    "completed_at": "2026-10-29T23:36:44.918204+08:00",
+    "details": "attack-reconstruction-20261030.json",
+    "tar8_counter4_5_and_bounded_gpr_follow_up_completed": true,
+    "does_not_retroactively_change_this_round_counts": true
   }
 }
