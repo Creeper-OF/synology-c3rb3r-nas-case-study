@@ -2,8 +2,8 @@
   "schema_version": 1,
   "case_id": "NAS-A-20261029",
   "timezone": "Asia/Shanghai",
-  "fact_review_cutoff": "2026-10-29T21:28:44+08:00",
-  "recovery_count_cutoff": "2026-10-29T20:20:19+08:00",
+  "fact_review_cutoff": "2026-10-29T23:08:40.668533+08:00",
+  "recovery_count_cutoff": "2026-10-29T22:46:35.390802+08:00",
   "status": {
     "effective_decryption_key_found": false,
     "encryptor_binary_obtained": false,
@@ -15,7 +15,11 @@
     "candidate_upx_first_block_obtained": true,
     "candidate_fragment_identity_proven": false,
     "original_exploit_request_source_proven": false,
-    "attacker_source_ip_identified_definition": "Original sender of the exploit request, not a correlated proxy peer/delivery node; original request not recovered."
+    "attacker_source_ip_identified_definition": "Original sender of the exploit request, not a correlated proxy peer/delivery node; original request not recovered.",
+    "public_delivery_endpoint_exact_match": true,
+    "deleted_libgld_directory_entry_recovered": true,
+    "original_libgld_inode_recovered": false,
+    "same_exact_delivery_batch_proven": false
   },
   "environment": {
     "dsm_version": "7.2.1-69057 Update 1",
@@ -40,7 +44,8 @@
     "full_disk_image_completed": false,
     "root_system_partition_live_image_bytes": 2549940224,
     "root_system_partition_stream_sha256_matches_local": true,
-    "root_system_partition_image_atomic": false
+    "root_system_partition_image_atomic": false,
+    "root_system_partition_image_sha256": "de9d9cfca467479424180f22cd4590a481ab6b4e67031201068c610361fa36dd"
   },
   "timeline": [
     {
@@ -57,7 +62,7 @@
     },
     {
       "time": "2026-10-29T05:03:19+08:00",
-      "basis": "RAM-resident command log",
+      "basis": "RAM-resident command log and independently byte-matched plaintext rm.log in preserved ext4 image",
       "observation": "root rm invoked for five synotgzz.PID cron paths",
       "deletion_success_independently_proven": false
     },
@@ -73,7 +78,7 @@
     },
     {
       "time": "2026-10-29T05:10:20+08:00",
-      "basis": "RAM-resident command log and a separate cron metadata object",
+      "basis": "RAM-resident command log, cron metadata and independently byte-matched plaintext rm.log in preserved ext4 image",
       "observation": "root rm invoked for /bin/l0ck.enc; associated crond.service metadata"
     },
     {
@@ -88,11 +93,12 @@
     "first_intrusion_time_known": false,
     "complete_original_request_obtained": false,
     "legitimate_frp_relay_is_attacker_evidence": false,
-    "associated_external_node": "S1 (redacted)",
+    "associated_external_node": "S1 (previous alias); independently public delivery IOC is defanged in evidence/ext4-findings.json",
     "association_basis": [
       "Existing relay connection logs matched to local client instance",
       "Strictly decoded command suffix targets the same node",
-      "Task-name/command co-location and kernel-object/page-table association to saved crond memory"
+      "Task-name/command co-location and kernel-object/page-table association to saved crond memory",
+      "Freed ext4 origin attribute records an exact independently public delivery endpoint; prior S1 observations correlate to the same address. Original exploit request still not recovered."
     ],
     "associated_scheduler_process": {
       "name": "crond",
@@ -134,7 +140,8 @@
       "swap_boundary_file_materials": 582880,
       "valid_key_hits": 0,
       "counts_not_globally_additive": true
-    }
+    },
+    "late_round_results": "late-key-validation.json"
   },
   "recovery_checkpoints": [
     {
@@ -173,6 +180,26 @@
       "service_active_in_record": true,
       "must_not_add_to_previous_count": true,
       "whole_original_files_implied": false
+    },
+    {
+      "at": "2026-10-29T22:46:35.390802+08:00",
+      "scope": "Saved service/migration checkpoint; includes members, components and fragments; not application acceptance",
+      "output_objects": 885014,
+      "source_archive_jobs": {
+        "complete": 274,
+        "pending": 156,
+        "running": 1
+      },
+      "service_active_in_record": true,
+      "stage": "migrating recovery outputs to another data volume",
+      "migration": {
+        "output_objects_completed": 21565,
+        "bytes_completed": 11840542306,
+        "total_output_objects_in_migration_plan": 885014,
+        "total_bytes_in_migration_plan": 246610131984
+      },
+      "must_not_add_to_previous_count": true,
+      "whole_original_files_implied": false
     }
   ],
   "usability_checks": {
@@ -202,7 +229,9 @@
     "raw_evidence_included": false,
     "credentials_or_key_material_included": false,
     "personal_files_included": false,
-    "remote_endpoints_included": false
+    "remote_endpoints_included": true,
+    "remote_endpoints_included_scope": "Only independently public non-victim attacker infrastructure, defanged; no victim or owner-operated relay endpoint disclosed.",
+    "victim_remote_endpoints_included": false
   },
   "method_corrections": {
     "zsmalloc_fullness_bits": 4,
@@ -236,5 +265,13 @@
       "source_characterization": "Victim self-published forensic case; coverage is not independent reproduction of private evidence.",
       "checked_at": "2026-10-29T21:28:44+08:00"
     }
-  ]
+  ],
+  "ext4_follow_up": {
+    "structured_findings": "ext4-findings.json",
+    "original_executable_inode_recovered": false,
+    "union_reused_inode_metadata_versions": 247,
+    "same_delivery_endpoint_confirmed": true,
+    "same_exact_delivery_batch_proven": false,
+    "orphan_xattr_bound_to_libgld": false
+  }
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "case_id": "NAS-A-20261029",
-  "offset_unit": "bytes from start of the named acquisition file; not physical address",
+  "offset_unit": "Bytes from the start of the specifically named acquisition file. Image offsets are within the root-system-partition image, not a whole disk; RAM file offsets are not physical addresses.",
   "independent_reproduction_limit": "Hashes locate privately retained records; raw records are not published and cannot be reconstructed from this repository.",
   "records": [
     {
@@ -396,6 +396,203 @@
         "Nashub links this repository as its fourth public victim case; report is attributed to victim self-publication."
       ],
       "raw_records_published": false
+    },
+    {
+      "id": "E21",
+      "title": "Freed ext4 origin attribute and plaintext cleanup log",
+      "private_records": [
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E21-EXT4_IOC_RESULTS.json",
+          "sha256_at_review": "013ef033353789b26c526a5fa7a0b227b9ca92e48fb62628cfb473294d1f1603"
+        },
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E21-IOC_XATTR_VERIFICATION.json",
+          "sha256_at_review": "21909ffe54655c1b693f86f4476982f882f0251afabb78d6c22cb4e519b662a4"
+        },
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E21-RM_LOG_PHYSICAL_VERIFICATION.json",
+          "sha256_at_review": "f1ab5c09c8afaabe56a4305ee6fabce52867320115cdc2954f844af4cb6069c6"
+        },
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E21-FINAL_INTEGRITY_RECEIPT.json",
+          "sha256_at_review": "4053a8528276f61fc3772715cca746fb6204075f14835fb72ad56aaa1f598ba7"
+        }
+      ],
+      "public_summary": [
+        "Freed block164366 retains user.xdg.origin.url matching the independently public payload endpoint.",
+        "rm.log rows473/474 match image bytes; host label is redacted in published excerpts.",
+        "Orphan attribute ownership is unproven; original and analysis-copy image hashes remain unchanged."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E22",
+      "title": "Deleted directory entry, inode reuse and earlier journal review",
+      "private_records": [
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E22-INODE_REUSE_ASSESSMENT.json",
+          "sha256_at_review": "1a300f5fb053c89d25c7cf1e45fdc78e70d996d59a8e84bd964d5584f39c9409"
+        },
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E22-cached-inode-page-reconstruction.json",
+          "sha256_at_review": "3851897e4e79ee42f4d31f4cf1b5d69456fa6ca29683b5af47b1afbf8ab38635"
+        },
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E22-EARLIER_JOURNAL_RESULTS.json",
+          "sha256_at_review": "b8830bac63c42926dcbe143706c12306a6fc818fe4c2fb0ffeadb24396ea9cef"
+        },
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E22-INODE_UNION_RESULTS.json",
+          "sha256_at_review": "952639b7f8e452570871aa6b316f507bab72c0d6c6b5f97efa6f4b15e9ed8dab"
+        }
+      ],
+      "public_summary": [
+        "Deleted libgld directory entry points to reused inode43222.",
+        "226 and243 metadata-version sets overlap222; union247, including21 earlier-only versions.",
+        "No recovered original executable inode or historical pointer to block164366."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E23",
+      "title": "Comparison to independently public delivery IOC",
+      "private_records": [
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E23-PUBLIC_IOC_COMPARISON.json",
+          "sha256_at_review": "f7fd52d11bb2c167e3513ca948a15701aed3f6e2086c29e0ca61feae281cc554"
+        },
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E23-public-issue-6-comments.json",
+          "sha256_at_review": "9d4e93510a45a60bf2d47e5e6b47a17bdb98f998fac023ce36e4332c6407caab"
+        }
+      ],
+      "public_summary": [
+        "Exact payload URL match; own locally recorded image acquisition precedes the cited public comment.",
+        "Same binary hash, precise delivery batch and operator identity remain unproven."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E24",
+      "title": "Hash DRBG and SHA message-schedule residue checks",
+      "private_records": [
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E24-DRBG_RESIDUE_RESULTS.json",
+          "sha256_at_review": "02f6aa5d3bf6c5af4f16e86f0c44617e8d92744a1eb84acf8f77bdefd31922e5"
+        }
+      ],
+      "public_summary": [
+        "Round union456271 AES candidate values; zero validated key hits.",
+        "SHA message expansion reconstruction is not inversion of SHA-256 or erased historical state."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E25",
+      "title": "Sparse AES schedule gap checks",
+      "private_records": [
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E25-SPARSE_SCHEDULE_RESULTS.json",
+          "sha256_at_review": "e7dda3febab775eb9402523b112cfbb72fdc9b32b4b2f98958f1160469463004"
+        },
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E25-INITIAL_SCAN_REVISION.json",
+          "sha256_at_review": "dff5633677ee0486fad238fe5476b9a2686c449b9b6f2c6e74bf4a5a0e7638af"
+        }
+      ],
+      "public_summary": [
+        "Gap32:406051;gap16:2713271;overlap6348;round union3112974.",
+        "All candidates checked against24120 valid footers; zero hits; superseded trial excluded."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E26",
+      "title": "Additional page boundaries and saved SSE register checks",
+      "private_records": [
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E26-ROUND_RESULTS.json",
+          "sha256_at_review": "d133d2046f066f642bb7b5cdd2f21277a3dbf526a9a33ad9b690bf394327856f"
+        }
+      ],
+      "public_summary": [
+        "23480 independently audited boundaries including130 cross-PT joins.",
+        "527432 boundary-derived and73472 register-derived AES values; round union600903; zero hits."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E27",
+      "title": "Unfiltered ChaCha8 saved-range scan and independent coverage audit",
+      "private_records": [
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E27-ROUND_RESULTS.json",
+          "sha256_at_review": "8c0896d93837c70f75b97bf3542c6c914dc78e97570f80192d7223a96353fe4e"
+        },
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E27-COVERAGE_AUDIT_RESULTS.json",
+          "sha256_at_review": "93e30aaa77fb940ecd36672d7b06481c6078e6d81a5c5f602e2c65cca2437e2d"
+        }
+      ],
+      "public_summary": [
+        "564 jobs,67489880036 position/layout attempts; declared coverage audit passed.",
+        "76849 distinct prefilter materials independently checked; zero structured headers.",
+        "Limited to declared ChaCha8 layouts/counters; zero/repeated and overlapping representations included."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E28",
+      "title": "Format/TAR/SIMD/FXSAVE validation",
+      "private_records": [
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E28-EXTENSION_RESULTS.json",
+          "sha256_at_review": "47ab137b02d3aad0c2945352b912dff18cf8ad19c6b94809da54a417759eac84"
+        }
+      ],
+      "public_summary": [
+        "5358 extra format heads and126 TAR targets; no validated file key.",
+        "588 distinct saved SSE register sets yield5554458 new candidate AES values; all24120 footers checked, zero hits."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E29",
+      "title": "Recovery migration checkpoint",
+      "private_records": [
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E29-LATEST_STATUS.json",
+          "sha256_at_review": "d5027a901e70f03468988130821d073b5fafab0268fe53b593611e41e94fbfae"
+        }
+      ],
+      "public_summary": [
+        "At2026-10-29T22:46:35.390802+08:00:885014 output objects;274/431 source archive tasks complete.",
+        "21565 recovery-output objects and11840542306 bytes recorded migrated; no complete-file or recovery-rate implication."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E30",
+      "title": "Additional MCA,SQLite and source-text prefix hypotheses",
+      "private_records": [
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E30-extended-prefix-target-summary.json",
+          "sha256_at_review": "02ef4cefd72adc1d650a5f013a8957430ee919c949d2c54365f5bf0af113733c"
+        },
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E30-extended-match-results.json",
+          "sha256_at_review": "5959c29cbac8ce1bc088a8d0a0fa5e616956402a237506bdf43f60d7fb0dcbe5"
+        },
+        {
+          "name": "ext4-publication-followup-20261029/publication-private/E30-extended-format-validation-private.json",
+          "sha256_at_review": "a645cf21e40715307b9f66d6ee47bacef7eb6203e3fc7bf735baf99735a76d99"
+        }
+      ],
+      "public_summary": [
+        "7442 prefix hypotheses;42245424 material attempts;298 short prefix hints;zero structured headers or validated keys.",
+        "Overlaps other format methods; no additive source/candidate coverage claim."
+      ],
+      "raw_records_published": false
     }
   ],
   "memory_slices": [
@@ -428,12 +625,12 @@
     }
   ],
   "injection_fragment_file_offset": 4993348294,
-  "follow_up_reviewed_at": "2026-10-29T21:28:44+08:00",
+  "follow_up_reviewed_at": "2026-10-29T23:08:40.668533+08:00",
   "derived_page_proof": {
     "description": "Strictly decoded cron/name/command co-location page; raw bytes remain private",
     "bytes": 4096,
     "sha256": "04c5e00e5b9a6a39d2bb6afab8dd79075bda6e7b47ac4192574c5d72ad6bb60d",
     "binary_published": false
   },
-  "verification_note": "Published updates checked against frozen private records; reference selftests rerun with existing analysis environment."
+  "verification_note": "Published updates checked against frozen private records; reference selftests rerun with existing analysis environment. E21-E29 use frozen private snapshots; only whitelisted summaries and host-redacted log excerpts are published."
 }

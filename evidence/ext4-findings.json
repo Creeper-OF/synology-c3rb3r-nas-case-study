@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "case_id": "NAS-A-20261029",
+  "reviewed_at": "2026-10-29T23:08:40.668533+08:00",
+  "source_image": {
+    "kind": "online sequential ext4 root-system-partition image, not atomic",
+    "bytes": 2549940224,
+    "sha256": "de9d9cfca467479424180f22cd4590a481ab6b4e67031201068c610361fa36dd",
+    "acquisition": {
+      "acquisition_started": "2026-10-29T18:37:12.268559+08:00",
+      "acquisition_finished": "2026-10-29T18:40:54.452315+08:00",
+      "local_verification_finished": "2026-10-29T18:41:44.638774+08:00"
+    },
+    "raw_image_published": false,
+    "source_and_working_copy_sha256_unchanged": true,
+    "work_copy_mode": "0444",
+    "live_nas_access_in_this_analysis": false
+  },
+  "matching_public_ioc": {
+    "defanged_url": "hxxp://46[.]8[.]78[.]122/xdy5[.]6xc?x86_64",
+    "exact_match": true,
+    "reference_comment": "https://github.com/soimy/c3rb3r-rescue/issues/6#issuecomment-6495836088",
+    "reference_created_at": "2026-10-29T11:48:42Z",
+    "same_delivery_endpoint_confirmed": true,
+    "same_binary_hash_proven": false,
+    "same_exact_delivery_batch_proven": false,
+    "operator_identity_proven": false
+  },
+  "origin_xattr": {
+    "block": 164366,
+    "image_offset": 673243136,
+    "block_sha256": "fe1f23ba7f82b05e8634aec00dfdead103b95453c783b68d10042c84872f43f8",
+    "allocated_in_capture_bitmap": false,
+    "inode_owners_in_current_table": [],
+    "namespace_index": 1,
+    "attribute": "user.xdg.origin.url",
+    "value_image_offset": 673247196,
+    "value_length": 34,
+    "entry_hash_stored": "0x49a37ad",
+    "entry_hash_independently_computed": "0x49a37ad",
+    "entry_hash_matches": true,
+    "block_attribute_hash_matches": true,
+    "ownership_limitation": "No current i_file_acl pointer connects this freed block to libgld;do not label the xattr as belonging to recovered inode43222 without further historical evidence."
+  },
+  "deleted_libgld_directory_entry": {
+    "parent": "/usr/bin",
+    "name": "libgld",
+    "inode": 43222,
+    "directory_offset": 12092,
+    "image_offset": 42819388,
+    "record_length": 196,
+    "file_type": 1,
+    "linked_in_active_directory_chain": false,
+    "directory_entry_hex": "d6a80000c40006016c6962676c64"
+  },
+  "inode_reuse": {
+    "current_image_and_memory_distinct_versions": 226,
+    "earlier_journal_distinct_versions": 243,
+    "overlap": 222,
+    "union_distinct_versions": 247,
+    "earlier_only_versions": 21,
+    "deduplication_key": "SHA-256 of complete raw 256-byte target inode",
+    "original_root_executable_versions": 0,
+    "orphan_xattr_directly_bound_to_libgld": false,
+    "original_libgld_times_recovered": false
+  },
+  "earlier_journal": {
+    "earlier_journal_bytes": 67108864,
+    "earlier_journal_sha256": "7e079ebf869d1fe99a1bb878c1c26738a70ec53e4d3ce6dd133aff0b7e93d801",
+    "retained_commit_time_range": {
+      "bytes": 67108864,
+      "sha256": "7e079ebf869d1fe99a1bb878c1c26738a70ec53e4d3ce6dd133aff0b7e93d801",
+      "commit_blocks": 2365,
+      "earliest_commit_local": "2026-10-29T15:19:25+08:00",
+      "latest_commit_local": "2026-10-29T18:20:50+08:00",
+      "dawn_attack_window_present_in_commit_timestamps": false,
+      "atomic": false
+    }
+  },
+  "rm_log": {
+    "file_sha256": "c342e3ac24d998b28e7265539e6bb5c9dd33fd17ce73f8ebb11d4880b7905004",
+    "bytes": 54218,
+    "selected": [
+      {
+        "line_number": 473,
+        "text": "2026-10-29T05:03:19+08:00 NAS-A rm[22033]: uid: 0, euid: 0, arguments:[\"-f\" \"/etc/cron.d/synotgzz.18883\" \"/etc/cron.d/synotgzz.18885\" \"/etc/cron.d/synotgzz.18886\" \"/etc/cron.d/synotgzz.18887\" \"/etc/cron.d/synotgzz.18891\"]",
+        "file_offset": 52673,
+        "physical_pieces": [
+          {
+            "logical_file_block": 12,
+            "filesystem_block": 568943,
+            "image_offset": 2330394049,
+            "length": 225
+          }
+        ],
+        "independent_image_bytes_match": true,
+        "original_private_line_sha256": "13035da023e1a9c1e6e1a10f03c5c5f8c3b085197b3664d2062ad6e59cd9366b",
+        "redaction": "Hostname replaced by NAS-A. Original-line hash is not the hash of the redacted text."
+      },
+      {
+        "line_number": 474,
+        "text": "2026-10-29T05:10:20+08:00 NAS-A rm[23306]: uid: 0, euid: 0, arguments:[\"-f\" \"/bin/l0ck.enc\"]",
+        "file_offset": 52899,
+        "physical_pieces": [
+          {
+            "logical_file_block": 12,
+            "filesystem_block": 568943,
+            "image_offset": 2330394275,
+            "length": 96
+          }
+        ],
+        "independent_image_bytes_match": true,
+        "original_private_line_sha256": "608c67fcf8c7dfe2da6ecc574e75bab7950d70776a3bddcfa74d5c3e1268757e",
+        "redaction": "Hostname replaced by NAS-A. Original-line hash is not the hash of the redacted text."
+      }
+    ]
+  },
+  "rotated_rm_logs": {
+    "files_checked": 4,
+    "uncompressed_bytes": 4710867,
+    "additional_matching_lines": 0,
+    "latest_rotation_ends": "2026-10-13"
+  },
+  "limitations": [
+    "No original executable inode recovered; later reused-inode deletion timestamps must not be assigned to libgld.",
+    "Origin URL attribute alone does not prove a completed network download or execution.",
+    "rm invocation arguments are not per-file success results or attribution to a human.",
+    "Online sequential acquisition is not an atomic filesystem snapshot.",
+    "The xattr hash validates structural consistency, not cryptographic authenticity."
+  ],
+  "effective_decryption_key_found": false
+}

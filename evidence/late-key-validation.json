@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "case_id": "NAS-A-20261029",
+  "reviewed_at": "2026-10-29T23:08:40.668533+08:00",
+  "effective_decryption_key_found": false,
+  "valid_distinct_footer_targets": 24120,
+  "counts_are_candidate_values_not_identified_keys": true,
+  "rounds_not_globally_additive": true,
+  "drbg_sha": {
+    "drbg_struct_and_input_hypotheses": 56162,
+    "drbg_aes_values": 452912,
+    "drbg_footer_tests": 10924237440,
+    "sha18_fragment_aes_values": 3359,
+    "sha18_footer_tests": 81019080,
+    "aes_union_this_round": 456271,
+    "initial_c_matches": 0,
+    "successor_checks": 1516,
+    "consistent_successors": 0,
+    "sha_ring_layouts": 2,
+    "sha_ring_windows_per_layout": 5280351926,
+    "validated_key_hits": 0
+  },
+  "sparse_aes": {
+    "gap32_values": 406051,
+    "gap32_footer_tests": 9793950120,
+    "gap16_values": 2713271,
+    "gap16_footer_tests": 65444096520,
+    "overlap": 6348,
+    "union_this_round": 3112974,
+    "validated_key_hits": 0,
+    "initial_oversized_trial_superseded_and_excluded": true
+  },
+  "boundary_extension": {
+    "new_boundary_sequences": 23480,
+    "cross_pt_sequences": 130,
+    "independent_boundary_audit_passed": true,
+    "boundary_aes_values": 527432,
+    "additional_saved_sse_register_sets": 5,
+    "register_aes_values": 73472,
+    "union_this_round": 600903,
+    "validated_key_hits": 0
+  },
+  "format_tar_sse": {
+    "tar_heads": 126,
+    "record_attempts_per_format_scan": 205981775,
+    "fxsave_distinct_register_sets": 588,
+    "new_register_aes_values": 5554458,
+    "register_footer_tests": 133973526960,
+    "distinct_all_source_candidate_values_union_in_that_round": 5881333,
+    "validated_key_hits": 0,
+    "format_files_targeted": 5358,
+    "format_prefix_features": 39946
+  },
+  "unfiltered_chacha8": {
+    "completed_at": "2026-10-29T22:49:13.486435+08:00",
+    "total_jobs": 564,
+    "window_attempts": 67489880036,
+    "nonzero_material_window_attempts": 32904173842,
+    "zero_material_window_attempts": 34585706194,
+    "prefix_records": 106923,
+    "distinct_prefilter_materials_independently_checked": 76849,
+    "header_candidates": 0,
+    "independent_coverage_audit_passed": true,
+    "source_valid_range_bytes": 16905131863,
+    "source_files": 22,
+    "layouts": 4,
+    "counters": [
+      0,
+      1
+    ],
+    "full_range_chacha12_or_20_done": false,
+    "full_range_tar_block4_or_5_done": false,
+    "general_purpose_register_reconstruction_done": false
+  },
+  "limitations": [
+    "Different rounds reuse inputs and candidates; no global distinct-key or unique-new-memory total is claimed.",
+    "Known footer/header hypotheses remain conditional on the unidentified encryptor implementation.",
+    "Counts measure implemented tests, not a proof that all recoverable secrets have been exhausted."
+  ],
+  "additional_prefix_hypotheses": {
+    "target_hypotheses": 7442,
+    "material_attempts": 42245424,
+    "short_prefix_hints": 298,
+    "structured_header_candidates": 0,
+    "full_file_verified_keys": 0,
+    "not_globally_deduplicated": true
+  }
+}

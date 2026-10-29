@@ -12,4 +12,9 @@
 | [Linux v4.4.302：x86-64 页表](https://github.com/gregkh/linux/blob/v4.4.302/arch/x86/include/asm/pgtable_64.h) | 修正本机交换 PTE 编码；没有把原始 4.4 的表达式当作补丁版本的实现 |
 | [Nashub：Synology C3RB3R 事件跟踪](https://nashub.vn/posts/synology-ransomware-c3rb3r-lock3d) | 10 月 29 日条目链接本仓库，列为第四个公开取证案例；只用于记录外部收录 |
 
+本轮补充一手来源：
+
+- [Ericality 在 Issue #6 的 ext4 补充](https://github.com/soimy/c3rb3r-rescue/issues/6#issuecomment-6495836088)：精确投递 URL、来源属性和清理行为的跨案例比对；本机结论来自独立副本分析。
+- [Linux ext4 扩展属性](https://www.kernel.org/doc/html/latest/filesystems/ext4/attributes.html)与 [inode 文档](https://www.kernel.org/doc/html/latest/filesystems/ext4/inodes.html)：命名空间、外部属性块及 inode 解释。
+
 本机事实来源为所有者私有取证记录，其脱敏定位见[证据索引](../evidence/evidence-index.json)。本仓库独立撰写，不复制参考项目的长段文字、源码或恢复密钥。仓库没有重新声明第三方材料的许可。
