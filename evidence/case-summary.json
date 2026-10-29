@@ -2,15 +2,20 @@
   "schema_version": 1,
   "case_id": "NAS-A-20261029",
   "timezone": "Asia/Shanghai",
-  "fact_review_cutoff": "2026-10-29T18:00:42+08:00",
-  "recovery_count_cutoff": "2026-10-29T17:45:07+08:00",
+  "fact_review_cutoff": "2026-10-29T21:28:44+08:00",
+  "recovery_count_cutoff": "2026-10-29T20:20:19+08:00",
   "status": {
     "effective_decryption_key_found": false,
     "encryptor_binary_obtained": false,
     "active_encryptor_observed_at_examination": false,
     "attacker_source_ip_identified": false,
     "complete_business_recovery_proven": false,
-    "recovery_work_ongoing": true
+    "recovery_work_ongoing": true,
+    "associated_external_node_identified": true,
+    "candidate_upx_first_block_obtained": true,
+    "candidate_fragment_identity_proven": false,
+    "original_exploit_request_source_proven": false,
+    "attacker_source_ip_identified_definition": "Original sender of the exploit request, not a correlated proxy peer/delivery node; original request not recovered."
   },
   "environment": {
     "dsm_version": "7.2.1-69057 Update 1",
@@ -23,16 +28,33 @@
     "outer_virtualization_independently_verified": false,
     "filesystem": "Btrfs",
     "main_shares_nocow_observed": true,
-    "usable_user_data_snapshot_confirmed": false
+    "usable_user_data_snapshot_confirmed": false,
+    "physical_host_confirmed_by_owner": true,
+    "physical_host_confirmation_basis": "Explicit owner statement: DSM runs directly on physical hardware; independent genuine-model attestation remains absent."
   },
   "acquisition": {
     "ram_bytes": 8479907840,
     "method": "Sequential reads of DSM /proc/kcore physical mappings streamed to an analysis machine",
     "atomic_snapshot": false,
     "swap_devices_captured": 5,
-    "full_disk_image_completed": false
+    "full_disk_image_completed": false,
+    "root_system_partition_live_image_bytes": 2549940224,
+    "root_system_partition_stream_sha256_matches_local": true,
+    "root_system_partition_image_atomic": false
   },
   "timeline": [
+    {
+      "time": "2026-10-29T05:01:58.025+08:00",
+      "basis": "Retained owner-operated relay log",
+      "observation": "Redacted node S1 connected to management-interface proxy; matched local client instance",
+      "complete_exploit_request_observed": false
+    },
+    {
+      "time": "2026-10-29T05:01:59.110+08:00",
+      "basis": "Retained owner-operated relay log",
+      "observation": "Second connection from same redacted node S1",
+      "complete_exploit_request_observed": false
+    },
     {
       "time": "2026-10-29T05:03:19+08:00",
       "basis": "RAM-resident command log",
@@ -65,7 +87,19 @@
     "confidence": "strongly supported, incomplete execution chain",
     "first_intrusion_time_known": false,
     "complete_original_request_obtained": false,
-    "legitimate_frp_relay_is_attacker_evidence": false
+    "legitimate_frp_relay_is_attacker_evidence": false,
+    "associated_external_node": "S1 (redacted)",
+    "association_basis": [
+      "Existing relay connection logs matched to local client instance",
+      "Strictly decoded command suffix targets the same node",
+      "Task-name/command co-location and kernel-object/page-table association to saved crond memory"
+    ],
+    "associated_scheduler_process": {
+      "name": "crond",
+      "pid_at_capture": 13917
+    },
+    "does_not_alone_prove_payload_execution": true,
+    "full_original_command_recovered": false
   },
   "key_validation": {
     "aes_unique_candidates": 168,
@@ -81,7 +115,26 @@
     "local_sample_footer_marker": "6d147f60",
     "upstream_case_footer_marker": "ce35a593",
     "upstream_isolated_tests_passed": 24,
-    "negative_results_prove_impossibility": false
+    "negative_results_prove_impossibility": false,
+    "counts_scope": "Flat candidate counts below preserve the initial18:00 checkpoint; later overlapping methods are recorded separately.",
+    "latest_follow_up": {
+      "valid_distinct_footer_records": 24120,
+      "known_prefix_eligible_ciphertext_heads": 24045,
+      "all_valid_footers_marker": "6d147f60",
+      "baremetal_reference_commit": "906e81293153341f162ee1f176722d93ba1d8358",
+      "baremetal_selftests_passed": 5,
+      "baremetal_original_parser_public_material_nonce_rejections": 24120,
+      "system_image_rsa2048_candidates_tested": 6,
+      "aes36_new_candidates": 9868,
+      "encoded_aes256_new_candidates": 1519417,
+      "encoded_aes256_footer_tests": 36648338040,
+      "candidate_swap_boundary_sequences": 35705,
+      "swap_boundary_aes256_candidates": 678,
+      "swap_boundary_aes128_candidates": 9,
+      "swap_boundary_file_materials": 582880,
+      "valid_key_hits": 0,
+      "counts_not_globally_additive": true
+    }
   },
   "recovery_checkpoints": [
     {
@@ -105,6 +158,19 @@
       "at": "2026-10-29T17:43:17+08:00",
       "scope": "running worker verification; not an equally audited fixed manifest",
       "output_objects": 60924,
+      "must_not_add_to_previous_count": true,
+      "whole_original_files_implied": false
+    },
+    {
+      "at": "2026-10-29T20:20:19+08:00",
+      "scope": "Saved worker status; includes members/components/fragments; not application acceptance",
+      "output_objects": 547993,
+      "source_archive_jobs": {
+        "complete": 252,
+        "pending": 178,
+        "running": 1
+      },
+      "service_active_in_record": true,
       "must_not_add_to_previous_count": true,
       "whole_original_files_implied": false
     }
@@ -137,5 +203,38 @@
     "credentials_or_key_material_included": false,
     "personal_files_included": false,
     "remote_endpoints_included": false
-  }
+  },
+  "method_corrections": {
+    "zsmalloc_fullness_bits": 4,
+    "zsmalloc_full_enum": 4,
+    "derived_new_lzo_representations": 4449,
+    "identical_in_original_RAM_or_logical_swap": 4381,
+    "no_page_aligned_identity_found": 68,
+    "new_lzo_count_is_not_unseen_memory_count": true,
+    "swap_pte_type": "pte >>59",
+    "swap_pte_offset": "((~pte)>>9)&((1<<50)-1)",
+    "kernel_layout_basis": "x86_64 Linux4.4.302, independently checked through a real zram slot and four-level process mapping",
+    "legacy_swap_mapping_negative_result_superseded": true,
+    "corrected_fixed_profile_key_hits": 0
+  },
+  "references": [
+    {
+      "repository": "https://github.com/soimy/c3rb3r-rescue",
+      "commit": "130933a95bf823bafc998a9d122b055075660319"
+    },
+    {
+      "repository": "https://github.com/Benjamin-zlt/c3rb3r-baremetal-rescue",
+      "commit": "906e81293153341f162ee1f176722d93ba1d8358"
+    }
+  ],
+  "external_coverage": [
+    {
+      "source": "Nashub",
+      "url": "https://nashub.vn/posts/synology-ransomware-c3rb3r-lock3d",
+      "case_ordinal": 4,
+      "article_update_label": "19:08 29/10",
+      "source_characterization": "Victim self-published forensic case; coverage is not independent reproduction of private evidence.",
+      "checked_at": "2026-10-29T21:28:44+08:00"
+    }
+  ]
 }

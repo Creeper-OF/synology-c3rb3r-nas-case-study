@@ -219,6 +219,183 @@
         "Partial map reconstruction and derived readable text require independent semantic validation."
       ],
       "raw_records_published": false
+    },
+    {
+      "id": "E13",
+      "title": "Online root-system image and incomplete UPX fragment",
+      "private_records": [
+        {
+          "name": "state-reversal-20261029/publication-update-private/E13-root-image-verified-receipt.json",
+          "sha256_at_review": "19f87e192cb267fd770acbefdbed48d9482ccc67a46fe8d179029899b9e156fc"
+        },
+        {
+          "name": "state-reversal-20261029/publication-update-private/E13-FRAGMENT_REPORT.json",
+          "sha256_at_review": "426307be70fab774941c9df63799856e70043a1fe8976bd123ce1a5e8453a280"
+        }
+      ],
+      "public_summary": [
+        "System image2549940224bytes verified against stream digest; live/sequential,not whole-userdata image.",
+        "Only4096B UPX fragment; original path and complete matching sample hash not proven."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E14",
+      "title": "Expanded corpus and bare-metal reference validation",
+      "private_records": [
+        {
+          "name": "state-reversal-20261029/publication-update-private/E14-baremetal-reference-crosscheck.json",
+          "sha256_at_review": "3bf2d001feb1d758f18423667a9d2b73ba713b0a73957a3d41de02b6cada44d4"
+        },
+        {
+          "name": "state-reversal-20261029/publication-update-private/E14-full-aes-validation.json",
+          "sha256_at_review": "b5a31746c338be200ccb89f0c52fecc1350a3f954c991af1795215213c254dc4"
+        },
+        {
+          "name": "state-reversal-20261029/publication-update-private/E14-full-rsa-oaep-validation.json",
+          "sha256_at_review": "59591c967c74d0963c25dc72265a3ef2d0f57865179f5f75bb3d328807c0b3c0"
+        },
+        {
+          "name": "state-reversal-20261029/publication-update-private/E14-new-rsa-candidates-validation.json",
+          "sha256_at_review": "fa52e1d6d4837d95bd5ab55a7c850551b1bc200c853fbb7518d85f20e568ef2c"
+        },
+        {
+          "name": "state-reversal-20261029/publication-update-private/baremetal-selftests.log",
+          "sha256_at_review": "7bc8be6a361f3dc8f99bdf223e24ab76a4a9f286a56dbcdc03a66f80d8a19742"
+        }
+      ],
+      "public_summary": [
+        "24120valid footers; no verified key hits; referenced bare-metal case requires its own live encryptor memory."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E15",
+      "title": "Associated external node and compressed command evidence",
+      "private_records": [
+        {
+          "name": "state-reversal-20261029/publication-update-private/E15-ASSOCIATED_SOURCE_ASSESSMENT.json",
+          "sha256_at_review": "c60f3de1f8120a395d28c7eaa0262c7f4db173787aae6de79475d91a191876de"
+        },
+        {
+          "name": "state-reversal-20261029/publication-update-private/E15-manifest.json",
+          "sha256_at_review": "4a337a7c28adce64dc560ab73c70edccc57504ef18e3240b23c6b24797ea3664"
+        }
+      ],
+      "public_summary": [
+        "Actual endpoint redacted asS1; retained relay records and decoded command suffix are associated.",
+        "Original request,sender chain,and full command remain incomplete."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E16",
+      "title": "Corrected compression metadata and original-source coverage",
+      "private_records": [
+        {
+          "name": "state-reversal-20261029/publication-update-private/E16-verified-layout4-zspage-chain-index.json",
+          "sha256_at_review": "78b8e34e9e08cf3aec4adb5a11a286a046d493d96f7c8f4243aa0840ee826c45"
+        },
+        {
+          "name": "state-reversal-20261029/publication-update-private/E16-lzo-page-prior-coverage.json",
+          "sha256_at_review": "f3128542350de65873c23afc5d981ded125258a0de8bdc73fe075695f5b31025"
+        }
+      ],
+      "public_summary": [
+        "4163reciprocal chains;4449newLZOrepresentations,4381identical in older RAM/swap,68without aligned fullpage match.",
+        "Legacy class-bit interpretation and unseen-page wording corrected."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E17",
+      "title": "Corrected swap-PTE and process/key reconstruction",
+      "private_records": [
+        {
+          "name": "state-reversal-20261029/publication-update-private/E17-STATE_REVERSAL_RESULTS.json",
+          "sha256_at_review": "2887bf2c2c16257e73e57db36d394d7d3ad0dc25d793b9d36d1ef9f2aa6deecf"
+        },
+        {
+          "name": "state-reversal-20261029/publication-update-private/E17-cron-page-table-4.4.302-reconstruction.json",
+          "sha256_at_review": "bd68d0b06bb0785fd0f3039cd8e493fbcda786765dbba1493224dae54ffea4fc"
+        },
+        {
+          "name": "state-reversal-20261029/publication-update-private/E17-cron-task-and-heap-private.json",
+          "sha256_at_review": "818a929781d526f284038d80245e38536086adb5e0099b564aabf1fb2fdfb36d"
+        },
+        {
+          "name": "state-reversal-20261029/publication-update-private/E17-swap-boundary-aes-validation.json",
+          "sha256_at_review": "5b0e7ad6f1903015994589cef2ededf9b49ab9a80fb8e70a500f82339eea049e"
+        },
+        {
+          "name": "state-reversal-20261029/publication-update-private/E17-swap-boundary-file-validation-private.json",
+          "sha256_at_review": "0bccb4588b77bc97492839798ab9034d6adf860ad708d4dc25847933a3132646"
+        }
+      ],
+      "public_summary": [
+        "Kernel chain links stored cron fragments tocrondPID13917.",
+        "35705swap-aware boundary hypotheses; no usable key; process reconstruction is partial/live-sequential."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E18",
+      "title": "Additional key structures and encoded material checks",
+      "private_records": [
+        {
+          "name": "state-reversal-20261029/publication-update-private/E18-aes36-validation.json",
+          "sha256_at_review": "39fce0c93a4882949fe19d10ee51c8863028b75c7e2df11276f0d72e392b4d66"
+        },
+        {
+          "name": "state-reversal-20261029/publication-update-private/E18-encoded-key-validation.json",
+          "sha256_at_review": "72555026b41a75864cef06f81d845f9e5962f2ad3c3218f37ed22e5b20e55b97"
+        },
+        {
+          "name": "state-reversal-20261029/publication-update-private/E18-file-context-validation-private.json",
+          "sha256_at_review": "b5b7c055ad6ae5fc82d62d52385a2260ee1a57b339c33906c53c7b571e5fc5b0"
+        },
+        {
+          "name": "state-reversal-20261029/publication-update-private/E18-extra-wrapper-modes-validation.json",
+          "sha256_at_review": "2208993eea1255205ef8f727b3224856b3c2edfcc2b495688a9d0d01268713ed"
+        }
+      ],
+      "public_summary": [
+        "Documented expanded/encoded/perfile candidates return no validated key; each method has its own bounds and overlapping sources."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E19",
+      "title": "Later recovery status checkpoint",
+      "private_records": [
+        {
+          "name": "state-reversal-20261029/publication-update-private/E19-recovery-checkpoint.json",
+          "sha256_at_review": "1856747f7a8849ddf4392d5b85a2df11f62d32ae3c436e1ea2773ccdbe874c24"
+        }
+      ],
+      "public_summary": [
+        "At20:20:19UTC+8:547993output objects;252complete,178pending,1running source archive jobs.",
+        "Output count does not imply complete original files or recovery rate."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E20",
+      "title": "External coverage verification",
+      "private_records": [
+        {
+          "name": "state-reversal-20261029/publication-update-private/E20-nashub-source-page.html",
+          "sha256_at_review": "c2b174f29540fc6769844180115866219b7602dbb30eefd77d455603aa821418"
+        },
+        {
+          "name": "state-reversal-20261029/publication-update-private/E20-reference-latest-github-api.json",
+          "sha256_at_review": "8bff7e8c1dc94a5f2ddac6ad17e7de4e194b9ef2ce2d74ca919d0b379dcf4f35"
+        }
+      ],
+      "public_summary": [
+        "Nashub links this repository as its fourth public victim case; report is attributed to victim self-publication."
+      ],
+      "raw_records_published": false
     }
   ],
   "memory_slices": [
@@ -250,5 +427,13 @@
       "binary_published": false
     }
   ],
-  "injection_fragment_file_offset": 4993348294
+  "injection_fragment_file_offset": 4993348294,
+  "follow_up_reviewed_at": "2026-10-29T21:28:44+08:00",
+  "derived_page_proof": {
+    "description": "Strictly decoded cron/name/command co-location page; raw bytes remain private",
+    "bytes": 4096,
+    "sha256": "04c5e00e5b9a6a39d2bb6afab8dd79075bda6e7b47ac4192574c5d72ad6bb60d",
+    "binary_published": false
+  },
+  "verification_note": "Published updates checked against frozen private records; reference selftests rerun with existing analysis environment."
 }
