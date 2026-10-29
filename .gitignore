@@ -1,0 +1,18 @@
+# Raw evidence and credentials belong outside this public repository.
+private/
+raw/
+memory/
+swap/
+recovered/
+*.bin
+*.dump
+*.core
+*.pem
+*.key
+*.tar
+*.tar.gz
+*.L0CK3D
+.env
+.env.*
+*password*
+__pycache__/

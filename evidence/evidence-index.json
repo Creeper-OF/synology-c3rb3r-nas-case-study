@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "case_id": "NAS-A-20261029",
+  "offset_unit": "bytes from start of the named acquisition file; not physical address",
+  "independent_reproduction_limit": "Hashes locate privately retained records; raw records are not published and cannot be reconstructed from this repository.",
+  "records": [
+    {
+      "id": "E01",
+      "title": "Environment verification",
+      "private_records": [
+        {
+          "name": "case-environment-verification.json",
+          "sha256_at_review": "414883e07beb6e20b1db0e9b39e019cce641f317dfe573b4451d4b5e5a80ce9c"
+        }
+      ],
+      "public_summary": [
+        "DSM Update 1; J1900/OEM information differs from reported DS918+ model."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E02",
+      "title": "Initial inventory and RAM mapping",
+      "private_records": [
+        {
+          "name": "inventory.json",
+          "sha256_at_review": "f8aa74b1b0302ab978133799defe98cc804ad9db3902d26bfe142d78e9ed9826"
+        },
+        {
+          "name": "memory/manifest.json",
+          "sha256_at_review": "67166307d45858ed81692ed0809d4610a16ac328a8b5d5bafefe24245f081c86"
+        }
+      ],
+      "public_summary": [
+        "Two Btrfs volumes; no confirmed usable user snapshots; RAM acquisition is live and sequential."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E03",
+      "title": "Ingress timeline and RAM evidence",
+      "private_records": [
+        {
+          "name": "INGRESS_TIMELINE_REPORT.txt",
+          "sha256_at_review": "2d9779ea67f045660ed9fa9a97cf2d877bf32b6b9c7234d193a16ce0dae41e6b"
+        },
+        {
+          "name": "ingress-evidence/manifest.json",
+          "sha256_at_review": "e78ddebdfc7f77b4aeaf96ca8d2b8f5001202d94ff14da003487e4f9de7f0ad5"
+        }
+      ],
+      "public_summary": [
+        "Injection fragment and cleanup command records; source IP remains unproven."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E04",
+      "title": "Structured key candidate validation",
+      "private_records": [
+        {
+          "name": "aes-footer-validation.json",
+          "sha256_at_review": "35fdaa2a3ea53225af5022ca956df8f1b124cd7b10809aeecac8af92c512d4ab"
+        },
+        {
+          "name": "full-memory-chacha-validation.json",
+          "sha256_at_review": "73ee6aea3bdbdd3aace7801ab6cc5bdc676f2e0af9715e552b0ea54fcd69d0c0"
+        },
+        {
+          "name": "rsa-final-validation.json",
+          "sha256_at_review": "3f3ddced68753e7a62f3ad2132d1711effaa4d59d3950ad760ebce440b1fe199"
+        }
+      ],
+      "public_summary": [
+        "No verified key hits; candidate counts follow their own deduplication rules."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E05",
+      "title": "Raw material and record scans",
+      "private_records": [
+        {
+          "name": "raw-aes-scan-result.json",
+          "sha256_at_review": "f0e011c1edd187bdfd4667063a2093aa6b93db7ddca4136f0d41ec221e55ccaf"
+        },
+        {
+          "name": "raw-file-record-validation.json",
+          "sha256_at_review": "fc569ea79adfc64eaa544472e6dc8b3910796d3e3c975595a69dea447fcdd4cf"
+        }
+      ],
+      "public_summary": [
+        "Raw AES/CBC and record hypotheses returned no hit; not exhaustive of all possible formats."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E06",
+      "title": "Upstream applicability checks",
+      "private_records": [
+        {
+          "name": "c3rb3r-public-key-diagnostic.json",
+          "sha256_at_review": "9c163af7de4c6204c63f10712abce08a301a99cf8c12cdcb1788013279578547"
+        },
+        {
+          "name": "c3rb3r-signature-scan.json",
+          "sha256_at_review": "bad07f870b93aaa429466ead916565782476819cc4557ebdb19e4e9dd61bb950"
+        },
+        {
+          "name": "c3rb3r-tests-isolated.log",
+          "sha256_at_review": "ed83a9fdc4fa7808c86d53e51a95c8975acfd632e56cf9f0750f80650327c41c"
+        }
+      ],
+      "public_summary": [
+        "Five local samples did not match; 24 isolated upstream tests passed without proving local applicability."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E07",
+      "title": "Fixed recovery checkpoint",
+      "private_records": [
+        {
+          "name": "RECOVERY_SUMMARY.json",
+          "sha256_at_review": "86b43cc8b06ebd40f6002e68844a0507463db94b32c3e1b6341e9d2c7e9f62c1"
+        },
+        {
+          "name": "recovery-manifest.csv",
+          "sha256_at_review": "6e5cda3e4fc907613a0eb0d41c84bc2a8cbc3919c02970ac6d74882a01d10289"
+        }
+      ],
+      "public_summary": [
+        "19,916 output objects at 17:01, including internal members and fragments."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E08",
+      "title": "Usability audit",
+      "private_records": [
+        {
+          "name": "recovery-usability-audit.json",
+          "sha256_at_review": "689b0f0185f266bebb3fa3e937d028fffe91ef506d8f4c773e5e755dcfa548a2"
+        },
+        {
+          "name": "historical-validation.json",
+          "sha256_at_review": "30d3979d6b8697baf9a6e5930db8c2b8d2ecefda33246e2a93ee2b5ae6d44a4e"
+        }
+      ],
+      "public_summary": [
+        "Five full MP4 decode samples and 18 Office structural checks; no general application usability proof."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E09",
+      "title": "Known persistence containment",
+      "private_records": [
+        {
+          "name": "containment.json",
+          "sha256_at_review": "76a31bdc2ad7b420b006688e38246a430d7d4a0bf0e96a0edf50de8cffb2bc2f"
+        },
+        {
+          "name": "containment-deployed.json",
+          "sha256_at_review": "32339167b96635ee4d4ae7beb892d1174eb48deb1190fa933c4b04dae78eb70c"
+        }
+      ],
+      "public_summary": [
+        "Known script quarantined and matched cron/startup lines removed after preservation."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E10",
+      "title": "Worker checkpoint and source preservation test",
+      "private_records": [
+        {
+          "name": "NAS_FINAL_AUTOMATION_VERIFICATION.json",
+          "sha256_at_review": "69a7a7efed613e1f8f029a0b958871b18d20f60053883729054af081705df7bc"
+        }
+      ],
+      "public_summary": [
+        "60,924 outputs at verification; tested job resumed and source digest and metadata remained unchanged."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E11",
+      "title": "Layout migration and deployment",
+      "private_records": [
+        {
+          "name": "NAS_DEPLOYMENT_VERIFICATION.json",
+          "sha256_at_review": "a8293074e441179de723390972099de805fac1e92ca7ebb13a9ad888e4f08cff"
+        },
+        {
+          "name": "NAS_LAYOUT_V2_DEPLOYED.json",
+          "sha256_at_review": "2d2d18c1df41ac0632184e8aa23fccc09700593129a5e5c84c9bb61922318271"
+        }
+      ],
+      "public_summary": [
+        "19,916 earlier outputs migrated with inode/size checks; source layout improves navigation, not missing content."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E12",
+      "title": "Partial-map and readable-text extraction",
+      "private_records": [
+        {
+          "name": "mca-salvage-all.recovery.json",
+          "sha256_at_review": "d59d9b715ddc1229add96f1f7559b5f167e96aa7212db018f08650c53448477c"
+        },
+        {
+          "name": "readable-office-summary.json",
+          "sha256_at_review": "83dbcd63d61677baa4fb9d88a23099bb0641ab5a807dcbeabe05d5455ac085e6"
+        }
+      ],
+      "public_summary": [
+        "Partial map reconstruction and derived readable text require independent semantic validation."
+      ],
+      "raw_records_published": false
+    }
+  ],
+  "memory_slices": [
+    {
+      "id": "RAM-SLICE-1",
+      "description": "环境变量注入",
+      "source_memory_file": "ram-08-100000000.bin",
+      "file_offset": 4993346246,
+      "length_bytes": 8192,
+      "sha256": "99479e4e769df6279858c060987447437834743aba102b29deee6f9b3b47b2a8",
+      "binary_published": false
+    },
+    {
+      "id": "RAM-SLICE-2",
+      "description": "删除cron与载荷日志",
+      "source_memory_file": "ram-08-100000000.bin",
+      "file_offset": 1947264449,
+      "length_bytes": 8192,
+      "sha256": "a4a3d4093b23e16efe0701403336e93955f9470def2938ad2bddc4c6029cc1bd",
+      "binary_published": false
+    },
+    {
+      "id": "RAM-SLICE-3",
+      "description": "载荷清理所属cron服务",
+      "source_memory_file": "ram-04-20100000.bin",
+      "file_offset": 1822334483,
+      "length_bytes": 8192,
+      "sha256": "9725035db159783213c57b031dc85d2abcf7e2b265daf416259a014f0dd898d0",
+      "binary_published": false
+    }
+  ],
+  "injection_fragment_file_offset": 4993348294
+}

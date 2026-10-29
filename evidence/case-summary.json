@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "case_id": "NAS-A-20261029",
+  "timezone": "Asia/Shanghai",
+  "fact_review_cutoff": "2026-10-29T18:00:42+08:00",
+  "recovery_count_cutoff": "2026-10-29T17:45:07+08:00",
+  "status": {
+    "effective_decryption_key_found": false,
+    "encryptor_binary_obtained": false,
+    "active_encryptor_observed_at_examination": false,
+    "attacker_source_ip_identified": false,
+    "complete_business_recovery_proven": false,
+    "recovery_work_ongoing": true
+  },
+  "environment": {
+    "dsm_version": "7.2.1-69057 Update 1",
+    "kernel": "4.4.302+",
+    "architecture": "x86_64",
+    "reported_model": "DS918+",
+    "dmi_product": "Synoden",
+    "cpu": "Intel Celeron J1900",
+    "genuine_model_verified": false,
+    "outer_virtualization_independently_verified": false,
+    "filesystem": "Btrfs",
+    "main_shares_nocow_observed": true,
+    "usable_user_data_snapshot_confirmed": false
+  },
+  "acquisition": {
+    "ram_bytes": 8479907840,
+    "method": "Sequential reads of DSM /proc/kcore physical mappings streamed to an analysis machine",
+    "atomic_snapshot": false,
+    "swap_devices_captured": 5,
+    "full_disk_image_completed": false
+  },
+  "timeline": [
+    {
+      "time": "2026-10-29T05:03:19+08:00",
+      "basis": "RAM-resident command log",
+      "observation": "root rm invoked for five synotgzz.PID cron paths",
+      "deletion_success_independently_proven": false
+    },
+    {
+      "time": "2026-10-29T05:09:45.916+08:00",
+      "basis": "/tmp/log.0 mtime",
+      "interpretation": "encryption-start marker; not direct process creation observation"
+    },
+    {
+      "time": "2026-10-29T05:09:45.923+08:00",
+      "basis": "ransom-note mtime",
+      "observation": "temporally adjacent to start marker"
+    },
+    {
+      "time": "2026-10-29T05:10:20+08:00",
+      "basis": "RAM-resident command log and a separate cron metadata object",
+      "observation": "root rm invoked for /bin/l0ck.enc; associated crond.service metadata"
+    },
+    {
+      "time": "2026-10-29T10:24:30.003+08:00",
+      "basis": "/tmp/log.1 mtime",
+      "interpretation": "completion marker; not direct process exit observation"
+    }
+  ],
+  "ingress_assessment": {
+    "hypothesis": "DSM login-plugin environment injection consistent with CVE-2024-10441",
+    "confidence": "strongly supported, incomplete execution chain",
+    "first_intrusion_time_known": false,
+    "complete_original_request_obtained": false,
+    "legitimate_frp_relay_is_attacker_evidence": false
+  },
+  "key_validation": {
+    "aes_unique_candidates": 168,
+    "aes_parameter_tests": 103320,
+    "chacha_state_candidates": 98,
+    "additional_ietf_chacha_tests": 1900,
+    "rsa_unique_private_key_candidates": 1,
+    "raw_aes_scan_bytes": 15555633152,
+    "raw_aes_eligible_windows": 6065128637,
+    "file_record_unique_candidates": 706847,
+    "validated_key_hits": 0,
+    "upstream_candidate_samples_tested": 5,
+    "local_sample_footer_marker": "6d147f60",
+    "upstream_case_footer_marker": "ce35a593",
+    "upstream_isolated_tests_passed": 24,
+    "negative_results_prove_impossibility": false
+  },
+  "recovery_checkpoints": [
+    {
+      "at": "2026-10-29T17:01:17+08:00",
+      "scope": "fixed manifest; includes components and fragments",
+      "output_objects": 19916,
+      "output_bytes": 27061177154,
+      "categories": {
+        "archive_members": 11901,
+        "office_components": 5887,
+        "rebuilt_map_regions": 970,
+        "intact_map_region_members": 170,
+        "historical_project_files": 617,
+        "derived_text_outputs": 5,
+        "partial_video_outputs": 38,
+        "audio_segments": 328
+      },
+      "whole_original_files_implied": false
+    },
+    {
+      "at": "2026-10-29T17:43:17+08:00",
+      "scope": "running worker verification; not an equally audited fixed manifest",
+      "output_objects": 60924,
+      "must_not_add_to_previous_count": true,
+      "whole_original_files_implied": false
+    }
+  ],
+  "usability_checks": {
+    "mp4_full_decode_samples": 5,
+    "mp4_samples_passed": 5,
+    "office_package_candidates_checked": 18,
+    "office_candidates_structural_checks_passed": 18,
+    "office_application_visual_checks_completed": false,
+    "reconstructed_map_chunks": 505962,
+    "owner_reported_serious_usability_problems": true,
+    "overall_recovery_percentage": null
+  },
+  "scene_changes": {
+    "known_downloader_quarantined": true,
+    "known_malicious_cron_reference_removed": true,
+    "known_malicious_startup_reference_removed": true,
+    "all_malware_absence_proven": false,
+    "later_worker_writes_new_directory_on_original_nas": true,
+    "all_operations_read_only": false,
+    "tested_resume_source_hash_unchanged": true
+  },
+  "reference": {
+    "repository": "https://github.com/soimy/c3rb3r-rescue",
+    "commit": "130933a95bf823bafc998a9d122b055075660319"
+  },
+  "privacy": {
+    "raw_evidence_included": false,
+    "credentials_or_key_material_included": false,
+    "personal_files_included": false,
+    "remote_endpoints_included": false
+  }
+}
