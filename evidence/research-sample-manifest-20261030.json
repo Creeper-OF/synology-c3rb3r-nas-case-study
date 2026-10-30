@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "collection": "C3RB3R malware research specimens 2026-10-30",
+  "purpose": "Defensive malware analysis and independent reproduction of the linked forensic report",
+  "source": "Collector-provided specimens from hxxp://46[.]8[.]78[.]122/;not downloaded by this packaging step",
+  "capture_metadata_utc": "2026-10-30T02:40:55Z",
+  "capture_metadata_basis": "Preserved collector HTTP response header;not all specimens have independent Date-bearing headers",
+  "preserved_early_x86_sample_comparison": "Script,x86 loader,encryptor,and both unpacked files are byte-identical to earlier retained copies",
+  "contains_live_malware": true,
+  "execution_performed_by_publisher": false,
+  "encryption": "WinZip AES-256 ZIP",
+  "public_archive_password": "infected",
+  "password_purpose": "Intentional-access and accidental-execution friction;not confidentiality",
+  "specimen_count": 11,
+  "files": [
+    {
+      "archive_path": "packed/xdy5.sh.sample",
+      "original_name": "xdy5.sh",
+      "kind": "original",
+      "bytes": 2277,
+      "sha256": "616177bf84e9899beb2da7d6c46352f27f86ce74e7d3ece911e6f208f5317151",
+      "content_modified": false,
+      "filename_suffix_added": ".sample",
+      "unix_mode": "0400"
+    },
+    {
+      "archive_path": "packed/xdy5.6x.sample",
+      "original_name": "xdy5.6x",
+      "kind": "original",
+      "bytes": 325468,
+      "sha256": "da4e0afee2e92eade2217d26918fb0ddd0c83b1bf3611b17b6ddc62919b8b99f",
+      "content_modified": false,
+      "filename_suffix_added": ".sample",
+      "unix_mode": "0400"
+    },
+    {
+      "archive_path": "packed/xdy5.6xc.sample",
+      "original_name": "xdy5.6xc",
+      "kind": "original",
+      "bytes": 462312,
+      "sha256": "802ac85d19dc6db2b1849bb3499877280544d04a0ae94d4c408b6c321669903d",
+      "content_modified": false,
+      "filename_suffix_added": ".sample",
+      "unix_mode": "0400"
+    },
+    {
+      "archive_path": "packed/xdy5.6a.sample",
+      "original_name": "xdy5.6a",
+      "kind": "original",
+      "bytes": 283968,
+      "sha256": "1efe035ebc9a4c606bf8400e7dea1a36dc543b47a33958b1f18f71bccb0fa489",
+      "content_modified": false,
+      "filename_suffix_added": ".sample",
+      "unix_mode": "0400"
+    },
+    {
+      "archive_path": "packed/xdy5.6ac.sample",
+      "original_name": "xdy5.6ac",
+      "kind": "original",
+      "bytes": 425524,
+      "sha256": "4b727eac08fc9552e4067d1a5ddde4460541a577388d15851c9badbc19722e5f",
+      "content_modified": false,
+      "filename_suffix_added": ".sample",
+      "unix_mode": "0400"
+    },
+    {
+      "archive_path": "packed/xdy5.3a.sample",
+      "original_name": "xdy5.3a",
+      "kind": "original",
+      "bytes": 249884,
+      "sha256": "fdf053c82568e75e7202e2b46f0d98c3305e392a3d5ecc32ffde9d71bcfa9bd9",
+      "content_modified": false,
+      "filename_suffix_added": ".sample",
+      "unix_mode": "0400"
+    },
+    {
+      "archive_path": "packed/xdy5.3ac.sample",
+      "original_name": "xdy5.3ac",
+      "kind": "original",
+      "bytes": 365084,
+      "sha256": "c2224f42be01d1ea7e7385ab8181cedcf53b5261b32c2d023ecc28ad1e2aaddb",
+      "content_modified": false,
+      "filename_suffix_added": ".sample",
+      "unix_mode": "0400"
+    },
+    {
+      "archive_path": "packed/xdy5.3ahf.sample",
+      "original_name": "xdy5.3ahf",
+      "kind": "original",
+      "bytes": 236732,
+      "sha256": "0c4b559191e9f839f4b5bb6f45360183af8598acbbf86a687b61bd8f44fdf9fc",
+      "content_modified": false,
+      "filename_suffix_added": ".sample",
+      "unix_mode": "0400"
+    },
+    {
+      "archive_path": "packed/xdy5.3ahfc.sample",
+      "original_name": "xdy5.3ahfc",
+      "kind": "original",
+      "bytes": 358608,
+      "sha256": "edbc1f7596d8fa540cacabc04a4bf1d257d61f9530acd86aca1039d936f7defc",
+      "content_modified": false,
+      "filename_suffix_added": ".sample",
+      "unix_mode": "0400"
+    },
+    {
+      "archive_path": "unpacked/libgld.unpack.sample",
+      "original_name": "libgld.unpack",
+      "kind": "provided unpacked encryptor",
+      "bytes": 1319024,
+      "sha256": "78d06b74827429f8b9947ac5940b15fb6e6f724386dcb04dc6f7eb6dcd41d3a4",
+      "content_modified": false,
+      "filename_suffix_added": ".sample",
+      "unix_mode": "0400"
+    },
+    {
+      "archive_path": "unpacked/qnetd.unpack.sample",
+      "original_name": "qnetd.unpack",
+      "kind": "provided unpacked loader",
+      "bytes": 900000,
+      "sha256": "a4be220e3a784e669159e3d669678e076d92fa47491d134161f43c0db6aa0693",
+      "content_modified": false,
+      "filename_suffix_added": ".sample",
+      "unix_mode": "0400"
+    }
+  ],
+  "contains_victim_memory_logs_credentials_or_business_files": false,
+  "report_url": "https://github.com/Creeper-OF/synology-c3rb3r-nas-case-study/blob/main/docs/payload-node-review-20261030.md"
+}
