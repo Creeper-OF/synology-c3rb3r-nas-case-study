@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "case_id": "NAS-A-20261029",
+  "reviewed_at": "2026-10-30T13:01:15.331217+08:00",
+  "scope": "Owner-authorized report, specimen hashes and verification methods; no malware executables, scripts, credentials or raw victim evidence published.",
+  "sample_hashes": [
+    {
+      "name": "xdy5.3a",
+      "bytes": 249884,
+      "sha256": "fdf053c82568e75e7202e2b46f0d98c3305e392a3d5ecc32ffde9d71bcfa9bd9",
+      "architecture": "ARM32"
+    },
+    {
+      "name": "xdy5.3ac",
+      "bytes": 365084,
+      "sha256": "c2224f42be01d1ea7e7385ab8181cedcf53b5261b32c2d023ecc28ad1e2aaddb",
+      "architecture": "ARM32"
+    },
+    {
+      "name": "xdy5.3ahf",
+      "bytes": 236732,
+      "sha256": "0c4b559191e9f839f4b5bb6f45360183af8598acbbf86a687b61bd8f44fdf9fc",
+      "architecture": "ARM32 hard-float"
+    },
+    {
+      "name": "xdy5.3ahfc",
+      "bytes": 358608,
+      "sha256": "edbc1f7596d8fa540cacabc04a4bf1d257d61f9530acd86aca1039d936f7defc",
+      "architecture": "ARM32 hard-float"
+    },
+    {
+      "name": "xdy5.6a",
+      "bytes": 283968,
+      "sha256": "1efe035ebc9a4c606bf8400e7dea1a36dc543b47a33958b1f18f71bccb0fa489",
+      "architecture": "AArch64"
+    },
+    {
+      "name": "xdy5.6ac",
+      "bytes": 425524,
+      "sha256": "4b727eac08fc9552e4067d1a5ddde4460541a577388d15851c9badbc19722e5f",
+      "architecture": "AArch64"
+    },
+    {
+      "name": "xdy5.6x",
+      "bytes": 325468,
+      "sha256": "da4e0afee2e92eade2217d26918fb0ddd0c83b1bf3611b17b6ddc62919b8b99f",
+      "architecture": "x86-64"
+    },
+    {
+      "name": "xdy5.6xc",
+      "bytes": 462312,
+      "sha256": "802ac85d19dc6db2b1849bb3499877280544d04a0ae94d4c408b6c321669903d",
+      "architecture": "x86-64"
+    },
+    {
+      "name": "xdy5.sh",
+      "bytes": 2277,
+      "sha256": "616177bf84e9899beb2da7d6c46352f27f86ce74e7d3ece911e6f208f5317151",
+      "architecture": "shell script"
+    }
+  ],
+  "comparisons": {
+    "initial_and_morning_capture_pairs": [
+      {
+        "new": "payloads/xdy5.sh",
+        "bytes": 2277,
+        "sha256": "616177bf84e9899beb2da7d6c46352f27f86ce74e7d3ece911e6f208f5317151",
+        "byte_for_byte_equal": true
+      },
+      {
+        "new": "payloads/xdy5.6x",
+        "bytes": 325468,
+        "sha256": "da4e0afee2e92eade2217d26918fb0ddd0c83b1bf3611b17b6ddc62919b8b99f",
+        "byte_for_byte_equal": true
+      },
+      {
+        "new": "payloads/xdy5.6xc",
+        "bytes": 462312,
+        "sha256": "802ac85d19dc6db2b1849bb3499877280544d04a0ae94d4c408b6c321669903d",
+        "byte_for_byte_equal": true
+      },
+      {
+        "new": "unpacked/libgld.unpack",
+        "bytes": 1319024,
+        "sha256": "78d06b74827429f8b9947ac5940b15fb6e6f724386dcb04dc6f7eb6dcd41d3a4",
+        "byte_for_byte_equal": true
+      },
+      {
+        "new": "unpacked/qnetd.unpack",
+        "bytes": 900000,
+        "sha256": "a4be220e3a784e669159e3d669678e076d92fa47491d134161f43c0db6aa0693",
+        "byte_for_byte_equal": true
+      }
+    ],
+    "reorganized_bundle_payload_header_and_unpacked_files": 12,
+    "reorganized_bundle_all_12_byte_identical": true,
+    "reorganized_bundle_manifest_records": 26,
+    "all_manifest_hashes_and_lengths_match": true,
+    "retained_nas_first_page": {
+      "bytes": 4096,
+      "root_partition_image_file_offset": 1487663104,
+      "sha256": "e2aae98acf1c9e2e562e3248872af34990243736275c4b7f4925e245d09f6b4f",
+      "matches_packed_x86_encryptor_first_page": true,
+      "limitation": "Only a retained 4 KiB fragment matched; a full executable acquired from NAS and its complete historical hash remain unavailable."
+    }
+  },
+  "delivery_nodes": {
+    "primary": "46[.]8[.]78[.]122",
+    "secondary_candidate": "94[.]183[.]151[.]83",
+    "secondary_basis": [
+      "Address present in the identical x86 loader.",
+      "Collector-provided HTTP transcript reports a response at primary with secondary Host value."
+    ],
+    "secondary_operator_identity_proven": false,
+    "exact_nginx_allowlist_recovered": false,
+    "network_path_and_proxy_details_in_transcript_complete": false
+  },
+  "timeline": [
+    {
+      "time_utc8": "2026-10-30T10:37:12+08:00",
+      "event": "Server-declared Last-Modified for retained encryptor and script",
+      "basis": "Preserved response-header records",
+      "proves_new_file_content": false
+    },
+    {
+      "time_utc8": "2026-10-30T10:40:55+08:00",
+      "event": "Encryptor response 200;462312 bytes;matching specimen retained",
+      "basis": "Complete retained response headers and local byte/hash verification"
+    },
+    {
+      "time_utc8": "2026-10-30T10:50:00+08:00",
+      "event": "Script and non-c loader paths reported as 404",
+      "basis": "Collector report;full timestamped response not supplied",
+      "time_precision": "collector-reported minute"
+    },
+    {
+      "time_utc8_start": "2026-10-30T10:59:00+08:00",
+      "time_utc8_end": "2026-10-30T11:00:00+08:00",
+      "event": "c encryptor paths also reported as 404;empty root remained 200",
+      "basis": "Collector report and 404 status excerpt;not complete Date-bearing response or filesystem audit",
+      "physical_deletion_or_actor_proven": false
+    }
+  ],
+  "http_metadata": {
+    "status": 200,
+    "date_utc": "2026-10-30T02:40:55Z",
+    "last_modified_utc": "2026-10-30T02:37:12Z",
+    "content_length": 462312,
+    "etag": "\"6ae402d8-70de8\"",
+    "etag_first_component_as_unix_time": "2026-10-30T02:37:12Z",
+    "etag_second_component_as_size": 462312,
+    "etag_is_content_sha256": false
+  },
+  "sample_specific_crypto": {
+    "unpacked_sha256": "78d06b74827429f8b9947ac5940b15fb6e6f724386dcb04dc6f7eb6dcd41d3a4",
+    "file_cipher": "ChaCha8",
+    "file_key_bytes": 32,
+    "nonce_bytes": 8,
+    "initial_counter": 0,
+    "file_key_record_plaintext": "file_key32 || nonce8 || nonce8",
+    "file_key_record_wrapper": "AES-256-CBC",
+    "master_buffer": "IV16 || AES_key32",
+    "rsa_wrapper": "OAEP;SHA-1;MGF1-SHA-1",
+    "footer_bytes": 588,
+    "public_keys": [
+      {
+        "bits": 1024,
+        "file_offset_hex": "0x13e040",
+        "bytes": 162,
+        "spki_sha256": "8e6826b258a9d53b1d986d332d1be431440d066d06ba30f3cea53415602f226c",
+        "exponent": 65537
+      },
+      {
+        "bits": 2048,
+        "file_offset_hex": "0x13eca0",
+        "bytes": 294,
+        "spki_sha256": "e0adb7d5b3430047de457bc7a14e7e017cbae918817f9e712a5956a820cc1698",
+        "exponent": 65537
+      }
+    ],
+    "static_code_addresses": {
+      "master_init": "0x4030ee",
+      "file_context": "0x4232e0",
+      "chacha_keysetup": "0x406213",
+      "chacha_ivsetup": "0x406628",
+      "chacha_process": "0x4066ee",
+      "aes_wrapper": "0x403057",
+      "rsa_wrapper": "0x4415ad",
+      "footer_writer": "0x42378f",
+      "master_cleanup": "0x438b5e"
+    },
+    "normalized_2048_spki_bytes": 294,
+    "supplied_2048_der_with_trailing_zero_bytes": 295,
+    "supplied_295byte_digest": "900a1a694f8e1f12aa99de465a6277dbb0c8cbadc567a457ad660b10584a2fc1",
+    "rsa1024_session_description_does_not_directly_contain_master_aes_key": true
+  },
+  "outcome": {
+    "effective_decryption_key_found": false,
+    "new_decryption_success": false,
+    "malware_executed_by_reviewer": false,
+    "external_nodes_contacted_by_reviewer": false,
+    "nas_changed_by_review": false
+  },
+  "limitations": [
+    "Collector HTTP transcripts were reviewed, not independently replayed.",
+    "Recent server mtime does not establish a new build;same bytes were compared directly.",
+    "404 does not prove physical deletion, attribution or absence of backup copies.",
+    "Static addresses apply only to the exact unpacked specimen.",
+    "Hashes identify private evidence;public repository does not include original binaries or memory."
+  ]
+}

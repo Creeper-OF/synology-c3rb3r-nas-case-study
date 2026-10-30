@@ -6,20 +6,23 @@
   "recovery_count_cutoff": "2026-10-29T22:46:35.390802+08:00",
   "status": {
     "effective_decryption_key_found": false,
-    "encryptor_binary_obtained": false,
+    "encryptor_binary_obtained": true,
     "active_encryptor_observed_at_examination": false,
     "attacker_source_ip_identified": false,
     "complete_business_recovery_proven": false,
     "recovery_work_ongoing": true,
     "associated_external_node_identified": true,
     "candidate_upx_first_block_obtained": true,
-    "candidate_fragment_identity_proven": false,
+    "candidate_fragment_identity_proven": true,
     "original_exploit_request_source_proven": false,
     "attacker_source_ip_identified_definition": "Original sender of the exploit request, not a correlated proxy peer/delivery node; original request not recovered.",
     "public_delivery_endpoint_exact_match": true,
     "deleted_libgld_directory_entry_recovered": true,
     "original_libgld_inode_recovered": false,
-    "same_exact_delivery_batch_proven": false
+    "same_exact_delivery_batch_proven": false,
+    "encryptor_binary_obtained_definition": "Externally supplied complete specimen retained;not a recovered full executable from NAS.",
+    "candidate_fragment_identity_proven_definition": "4096 retained bytes match the known packed specimen first page;does not prove full historical NAS-file identity.",
+    "full_historical_nas_executable_hash_proven": false
   },
   "environment": {
     "dsm_version": "7.2.1-69057 Update 1",
@@ -315,5 +318,13 @@
     "swap_bytes": 7075725312,
     "total_evidence_logical_bytes": 15785226381
   },
-  "attack_reconstruction": "attack-reconstruction-20261030.json"
+  "attack_reconstruction": "attack-reconstruction-20261030.json",
+  "payload_node_follow_up": {
+    "record": "payload-node-review-20261030.json",
+    "reviewed_at": "2026-10-30T13:01:15.331217+08:00",
+    "external_full_sample_obtained": true,
+    "early_and_morning_x86_samples_byte_identical": true,
+    "effective_decryption_key_found": false,
+    "recovery_counts_and_service_checkpoints_refreshed": false
+  }
 }

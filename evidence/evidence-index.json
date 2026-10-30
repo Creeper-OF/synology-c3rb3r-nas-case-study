@@ -839,6 +839,90 @@
         "Candidate sets overlap and are not globally additive;full-rangeChaCha12/20and several other layouts remain untested."
       ],
       "raw_records_published": false
+    },
+    {
+      "id": "E39",
+      "title": "Full external specimens and byte-identical comparison with early retained files",
+      "private_records": [
+        {
+          "name": "ds-final-evidence-review-20261030/publication-private/E39-ACQUISITION.json",
+          "sha256_at_review": "f7e5114c9e89bc7646063c2cb0599c5123f4edd1b94ff6069fd4fea21d0c6256"
+        },
+        {
+          "name": "ds-final-evidence-review-20261030/publication-private/E39-COMPARISON_RESULTS.json",
+          "sha256_at_review": "abef47721251016a3bda402a4297ea7f0c14d34abe452f2b57d8681c984f538f"
+        },
+        {
+          "name": "ds-final-evidence-review-20261030/publication-private/E39-ACQUISITION_AND_CHECKS.json",
+          "sha256_at_review": "c61a06b39dc83cf77192f4e61fac73e096c6076023d0f3810effde91138fb4fc"
+        },
+        {
+          "name": "ds-final-evidence-review-20261030/publication-private/E39-IDENTITY_AND_FOOTER_CHECKS.json",
+          "sha256_at_review": "3a2a5c3c390a07669da11c7c2acee15541fdd5314c57879b8b12cd388427fd5f"
+        }
+      ],
+      "public_summary": [
+        "26 reorganized manifest entries match hashes and sizes;12 payload/header/unpacked files identical to prior bundle.",
+        "Five core x86/script/unpacked pairs byte-identical to early preserved samples.",
+        "Retained NAS4096-byte fragment matches packed encryptor first page;full NAS executable hash remains unproven."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E40",
+      "title": "Collector-provided delivery-node HTTP metadata,withdrawal sequence and Host association",
+      "private_records": [
+        {
+          "name": "ds-final-evidence-review-20261030/publication-private/E40-xdy5.6xc.hdr",
+          "sha256_at_review": "7f115d973e785212e275fa956bef6fd66669485afe841488da77f5cd5c0a22a5"
+        },
+        {
+          "name": "ds-final-evidence-review-20261030/publication-private/E40-HTTP取证报文.txt",
+          "sha256_at_review": "b8b6c4e555c471ca424ce8f631249fdad798e4569e16133516a2482451f43908"
+        },
+        {
+          "name": "ds-final-evidence-review-20261030/publication-private/E40-取证报告.md",
+          "sha256_at_review": "2e4e1e7cfc4673491f8d2f6695258eeb9ebc049009844ee9ef88bff2262d1933"
+        }
+      ],
+      "public_summary": [
+        "Response Date10:40:55UTC+8 and Last-Modified10:37:12;ETag components matchmtime andsize,not contentSHA.",
+        "Later404 events and alternateHost response are collector-provided observations;full proxy/peer logs absent.",
+        "No new live probing by reviewer;physical deletion,exact allowlist andactor identity not proven."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E41",
+      "title": "Sample-specific crypto and strict two-public-key parsing corrections",
+      "private_records": [
+        {
+          "name": "ds-final-evidence-review-20261030/publication-private/E41-VERIFIED_RSA_OBJECTS.json",
+          "sha256_at_review": "d1d00a3f23f115f8d30a678f90eb31a4287ce879a032ba9746a8a0c15c8660bb"
+        },
+        {
+          "name": "ds-final-evidence-review-20261030/publication-private/E41-STATIC_KEY_OBJECTS.json",
+          "sha256_at_review": "58e781b9807b56dabad47bce2ff3db4223604b66951d1f45d3d3af53e805d28f"
+        },
+        {
+          "name": "ds-final-evidence-review-20261030/publication-private/E41-4030ee.c",
+          "sha256_at_review": "64526bd6f12704cf850742db5899878dc3b42f66535b1d5a0ef2010c197999ee"
+        },
+        {
+          "name": "ds-final-evidence-review-20261030/publication-private/E41-4066ee.c",
+          "sha256_at_review": "fc6ee6abcd5834666e92a2f2619f99f46d0788fad91baf1ed46b947e3767ddae"
+        },
+        {
+          "name": "ds-final-evidence-review-20261030/publication-private/E41-4415ad.c",
+          "sha256_at_review": "652d3672f2db93a2efb13953a3d7408a039701002dffd50ca485788843300051"
+        }
+      ],
+      "public_summary": [
+        "Exact same unpacked sample includes RSA1024 andRSA2048;canonicalSPKI lengths162/294.",
+        "Actual file path usesChaCha8,AES256CBC andRSA-OAEP;known staticaddresses recorded.",
+        "Raw295-byte DER includes extra00;no privatekeys or new victimkeys obtained."
+      ],
+      "raw_records_published": false
     }
   ],
   "memory_slices": [
@@ -871,7 +955,7 @@
     }
   ],
   "injection_fragment_file_offset": 4993348294,
-  "follow_up_reviewed_at": "2026-10-30T00:49:17.454937+08:00",
+  "follow_up_reviewed_at": "2026-10-30T13:01:15.331217+08:00",
   "derived_page_proof": {
     "description": "Strictly decoded cron/name/command co-location page; raw bytes remain private",
     "bytes": 4096,
