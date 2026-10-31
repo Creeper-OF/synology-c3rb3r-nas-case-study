@@ -4,7 +4,7 @@
 
 ## 证据层级
 
-[evidence-index.json](../evidence/evidence-index.json)把文档中的 E01–E41 对应到证据类型及保留的检查结果。[case-summary.json](../evidence/case-summary.json)保存带时间的统计口径及机器可读摘要。后续新增原始记录仍只保留在私有目录。
+[evidence-index.json](../evidence/evidence-index.json)把文档中的 E01–E44 对应到证据类型及保留的检查结果。[case-summary.json](../evidence/case-summary.json)保存带时间的统计口径及机器可读摘要。后续新增原始记录仍只保留在私有目录。
 
 三段关键内存切片的 SHA-256、来源文件及文件内偏移公开，原始切片不公开。摘要用于所有者将来持有原件时核对；没有二进制原件的第三方不能仅靠摘要独立验证内容。仓库因而是一份有明确证据定位的公开报告，不是完整可复现的取证镜像。
 
@@ -41,3 +41,5 @@ E39–E41 补充完整外部样本、节点响应记录及密码学复核。仅�
 2026-10-30，所有者在明确说明研究样本附件、密码归档和原件哈希后授权发布。精确范围为 8 份原始 ELF 载荷、1 份原始投递脚本及 2 份已验证的脱壳产物，共 11 份；样本内容字节不变，仅文件名追加 `.sample`、权限设为不可执行。它们位于独立加密 Release 附件，Git 历史只保存文档和清单。具体内容、归档摘要和公开密码见[研究样本说明](research-samples.md)。
 
 这一授权不包括 NAS RAM/swap、真实配置、账号凭据、其他密钥、业务文件或恢复结果。原始大包不整体上传。本次整理未执行样本、未访问投递节点、未改变 NAS。
+
+E42–E44 记录勒索信参数静态调用链、原位工具合成副本测试及 Btrfs 回填检查点。公开索引只包含范围、结论和私有记录摘要；路径参数、实际密钥、内存及业务文件继续留在私有证据中。详情见 [RSA 流程](ransom-token-crypto-analysis-20261031.md)、[工具测试](inplace-tool-validation-20261031.md)和[结构化摘要](../evidence/ransom-token-and-tool-validation-20261031.json)。

@@ -923,6 +923,83 @@
         "Raw295-byte DER includes extra00;no privatekeys or new victimkeys obtained."
       ],
       "raw_records_published": false
+    },
+    {
+      "id": "E42",
+      "title": "Ransom-note token generation and separate RSA wrapping paths",
+      "private_records": [
+        {
+          "name": "ransom-token-review-20261031/STATIC_EVIDENCE_MANIFEST_PRIVATE.json",
+          "sha256_at_review": "bfbcb873ae712169bc504ec27858e6ce565d24fc90caeae4f63d744d25b9069b"
+        },
+        {
+          "name": "ransom-token-review-20261031/FINAL_TOKEN_ANALYSIS_PRIVATE.json",
+          "sha256_at_review": "680041d16df634b9970f077d6da5535c68fc3735374fb7eb1fcc54bb09de44f4"
+        },
+        {
+          "name": "ransom-token-review-20261031/DESCRIPTOR_AND_TOKEN_SEARCH_PRIVATE.json",
+          "sha256_at_review": "76631b4303fddb281c1ad8a80620267a770dd0a7442251d21247f61ff6ead4c0"
+        }
+      ],
+      "public_summary": [
+        "Sample-specific 4-character decimal prefix followed by a hex-encoded 128-byte RSA-1024 ciphertext.",
+        "Separate RSA-2048 file record contains the session AES key and IV before encryption.",
+        "Eleven local notes agree; 24120 matching valid footers and a 36080779264-byte pattern search have the documented scope and limitations."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E43",
+      "title": "In-place tool synthetic fixture validation and bounded evidence trial",
+      "private_records": [
+        {
+          "name": "inplace-rescue-review-20261031/TEST_RESULTS_PRIVATE.json",
+          "sha256_at_review": "22e8a7f8feae9bd9d428a82ff137fffa00ac32781234d136b76df7aff8fa6672"
+        },
+        {
+          "name": "inplace-rescue-review-20261031/ASSESSMENT_PRIVATE.json",
+          "sha256_at_review": "48018cc8f277ab6c448a981784e8754810927c5488cab14c8f74aad649ea273d"
+        },
+        {
+          "name": "inplace-rescue-review-20261031/test_reference.py",
+          "sha256_at_review": "896e928b4911b803c34cc072189888868a66e9254e33ba259d93f533b883c150"
+        },
+        {
+          "name": "inplace-rescue-review-20261031/PUBLICATION_REVALIDATION_PRIVATE.json",
+          "sha256_at_review": "8ce75267632b4eec672798c240ee57a488352e88a0ab7865c29d4613fbee2a47"
+        }
+      ],
+      "public_summary": [
+        "Pinned Go implementation: eleven synthetic scenarios; four correct-key layouts returned exact original bytes.",
+        "Five scan and recovery limitations reproduced on synthetic copies.",
+        "Three bounded saved evidence samples total 23203840 bytes; no candidate hit; no full RAM rescan by this tool.",
+        "Fresh builds of the same pinned Go sources repeated all eleven synthetic scenarios before publication."
+      ],
+      "raw_records_published": false
+    },
+    {
+      "id": "E44",
+      "title": "Btrfs exact-candidate reconstruction and return-to-original-path checkpoint",
+      "private_records": [
+        {
+          "name": "btrfs-extent-review-20261031/RESTORE_FINAL_RECEIPT_PRIVATE.json",
+          "sha256_at_review": "a28adb1d7c896fe8de818b2ddd0f749d33b0a88a11a88d83313874053e3549eb"
+        },
+        {
+          "name": "btrfs-extent-review-20261031/VERIFIED_FILE_CLASSIFICATION_PRIVATE.json",
+          "sha256_at_review": "1561e7ca230dfb03bc67f208462597e14f4be776d3301eb0fb5c652fb614e850"
+        },
+        {
+          "name": "btrfs-extent-review-20261031/SYNTHETIC_FIXTURE_RESULTS_PRIVATE.json",
+          "sha256_at_review": "4b26ee3e83345caa2a17b6c2b122a48242eaa2d0d2394b6ca57d736085aa9b6b"
+        }
+      ],
+      "public_summary": [
+        "601 reconstructed files totaling 1998345949 bytes were returned to original directories after filesystem block and format checks.",
+        "Encrypted originals and verified 4T copies were retained; no corresponding pre-attack original hashes were available.",
+        "The checkpoint is not a whole-share recovery rate or proof that all application content is usable."
+      ],
+      "raw_records_published": false
     }
   ],
   "memory_slices": [

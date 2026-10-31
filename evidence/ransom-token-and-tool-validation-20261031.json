@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "case_id": "NAS-A-20261029",
+  "review_date": "2026-10-31",
+  "scope": "Static reverse engineering and synthetic tool validation; sensitive evidence and per-victim token are not published.",
+  "sample": {
+    "packed_sha256": "802ac85d19dc6db2b1849bb3499877280544d04a0ae94d4c408b6c321669903d",
+    "unpacked_sha256": "78d06b74827429f8b9947ac5940b15fb6e6f724386dcb04dc6f7eb6dcd41d3a4",
+    "nas_original_complete_binary_hash_proven": false
+  },
+  "ransom_path_record": {
+    "config_text_decimal_sample": "2202",
+    "sample_prefix_ascii_chars": 4,
+    "hex_encoded_ciphertext_bytes": 128,
+    "rsa_bits": 1024,
+    "descriptor_plaintext_bytes": 48,
+    "direct_aes_key_and_iv_copy_found": false,
+    "sampled_own_notes": 11,
+    "same_token_notes": 11,
+    "valid_own_footers_compared": 24120,
+    "same_rsa_ciphertext_in_compared_footers": false,
+    "saved_evidence_search_bytes_with_overlap_and_duplicates": 36080779264,
+    "descriptor_pattern_matches": 0
+  },
+  "file_footer_record": {
+    "rsa_bits": 2048,
+    "descriptor_plaintext_bytes": 112,
+    "session_aes_key_offset_before_rsa": 48,
+    "session_iv_offset_before_rsa": 80,
+    "session_marker_offset_before_rsa": 96
+  },
+  "inplace_tool": {
+    "commit": "2a1408b8a73504f348d1126783a975d8d59abf6a",
+    "synthetic_checks": 11,
+    "correct_key_layouts_matching": 4,
+    "known_limitation_cases": 5,
+    "own_evidence_trial_bytes": 23203840,
+    "own_candidate_hits": 0,
+    "whole_saved_memory_retested_with_this_tool": false,
+    "c_implementation_executed": false
+  },
+  "btrfs_recovery_checkpoint": {
+    "files_returned_to_original_paths": 601,
+    "bytes_returned": 1998345949,
+    "encrypted_originals_retained": 601,
+    "pre_attack_original_hash_comparison_available": false,
+    "whole_share_recovery_proven": false
+  },
+  "effective_case_decryption_key_found": false,
+  "token_or_private_material_published": false
+}
